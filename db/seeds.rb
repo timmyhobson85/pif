@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+
+u1 = User.create! name: 'tim', email: 'tim@test.com', password: 'chicken'
+u2 = User.create! name: 'luke', email: 'luke@test.com', password: 'chicken'
+u3 = User.create! name: 'josh', email: 'josh@test.com', password: 'chicken'
+
+puts "-created #{ User.count } users: #{ User.pluck(:name).join(', ') }"
+
+Thing.destroy_all
+
+t1 = Thing.create! name: 'dinner', act: 'need', quantity: 2
+t2 = Thing.create! name: 'down tree', act: 'need', quantity: 1
+t3 = Thing.create! name: 'fix fencing', act: 'offer', quantity: 1
+t4 = Thing.create! name: 'clothes', act: 'offer', quantity: 1
+t5 = Thing.create! name: 'lift', act: 'need', quantity: 1
+
+puts "-created #{ Thing.count } users: #{ Thing.all.pluck(:name).join(', ') }"
+
+u1.things << t1 << t2
+u2.things << t5
+u3.things << t3 << t4
+
+puts " #{ User.first.name } has following things: #{ User.first.things.pluck(:name).join(', ')}"
