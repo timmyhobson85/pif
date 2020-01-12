@@ -8,5 +8,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :things
+  resources :messages
 
 end

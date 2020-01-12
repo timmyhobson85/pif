@@ -1,0 +1,16 @@
+<h2><%= @message.subject %> from <%= @message.user.name %></h2>
+
+<p><%= @message.message %></p>
+
+<%= form_for @reply do |f| %>
+
+<h3>reply to <%= @message.user.name %></h3>
+
+<%# f.label :to_id %>
+<%# f.select :to_id, ["#{@message.user_id}"], :prompt => "#{@message.user.name}" %>
+
+<%= f.label :message %>
+<%= f.text_area :message %>
+
+<%= f.submit %>
+<% end %>

@@ -1,22 +1,46 @@
 class ThingsController < ApplicationController
   def new
+    @thing = Thing.new
   end
 
   def create
+    Thing.create name: params[:thing][:name], user: @current_user
+    redirect_to things_path
   end
 
   def index
+    @things = Thing.all
   end
 
   def show
+    @thing = Thing.find params[:id]
   end
 
   def edit
+    @thing = Thing.find params[:id]
+    # check_ownership
   end
 
   def update
+    puts params
+    @thing = Thing.find params[:id]
+    # redirect_to login_path and return unless @thing.user == @current_user
+    @thing.update thing_params
+    redirect_to thing_path @thing.id
   end
 
   def destroy
+    Thing.destroy params[:id]
+    redirect_to things_path
+  end
+
+  private
+
+  def thing_params
+    params.require(:thing).permit(:name, :act, :quantity, :image, :user_id)
+  end
+
+  def check_ownership
+    redirect_to login_path and return unless @thing.user == @current_user
   end
 end

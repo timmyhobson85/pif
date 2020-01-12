@@ -1,2 +1,9 @@
-<h1>Things#index</h1>
-<p>Find me in app/views/things/index.html.erb</p>
+<h2>List of Items/Tasks</h2>
+
+<ul>
+  <% @things.each do |t| %>
+  <li>
+    <%= link_to "#{t.act} - #{t.name} - #{t.quantity} - #{t.user.name}", thing_path(t.id) %>
+  </li>
+  <% end %>
+</ul>

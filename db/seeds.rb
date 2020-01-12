@@ -21,3 +21,7 @@ u2.things << t5
 u3.things << t3 << t4
 
 puts " #{ User.first.name } has following things: #{ User.first.things.pluck(:name).join(', ')}"
+
+m1 = Message.create! subject: 'hello 1', message: 'how are you 1?', to_id: u1.id, user_id: u2.id
+m2 = Message.create! subject: 'hello 2', message: 'how are you 2?', to_id: u2.id, user_id: u1.id
+m3 = Message.create! subject: 'hello 3', message: 'how are you 2?', to_id: u3.id, user_id: u1.id

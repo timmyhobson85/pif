@@ -17,6 +17,7 @@
           Welcome, <%= @current_user.name %>
           <%= link_to 'create thing', new_thing_path %>
           <%= link_to 'user account', user_path( @current_user.id ) %>
+          <%= link_to 'my messages', messages_path %>
           <%= link_to 'logout', login_path, method: 'delete' %>
         <% else %>
           <%= link_to 'login', login_path %>

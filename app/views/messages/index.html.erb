@@ -1,0 +1,9 @@
+<h2>my messages</h2>
+
+<% @messages.each do |m| %>
+<ul>
+  <% if m.to_id == @current_user.id %>
+  <li><%= link_to m.subject, message_path( m.id ) %></li>
+  <% end %>
+</ul>
+<% end %>

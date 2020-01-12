@@ -1,2 +1,17 @@
-<h1>Things#show</h1>
-<p>Find me in app/views/things/show.html.erb</p>
+<h2><%= "#{@thing.act} - #{@thing.name}" %></h2>
+<h3>added by <%= @thing.user.name %></h3>
+
+<p>
+  <%= @thing.name %> <br>
+  Quantity - <%= @thing.quantity %> <br>
+  <%= @thing.act %>
+</p>
+
+<% if @thing.image.present? %>
+  <%= image_tag @thing.image %>
+<% end %>
+
+<% if @thing.user_id == @current_user.id %>
+  <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>
+  <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
+<% end %>

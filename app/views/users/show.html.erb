@@ -1,3 +1,16 @@
 <h2>welcome <%= @user.name %></h2>
 
+<h3>your listings</h3>
+<p>
+  <ul>
+    <% @user.things.each do |t| %>
+      <% if t.user_id == @current_user.id %>
+      <li>
+        <%= link_to "#{t.act} - #{t.name} - #{t.quantity} - #{t.user.name}", thing_path(t.id) %>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+</p>
 <%= link_to 'delete account', user_path( @current_user.id ), method: 'delete' %>
+<%= link_to 'edit account', edit_user_path( @current_user.id ) %>
