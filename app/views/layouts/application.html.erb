@@ -13,7 +13,15 @@
     <header>
       <h1>pif - pay it forward</h1>
       <nav>
-        links
+        <% if @current_user.present? %>
+          Welcome, <%= @current_user.name %>
+          <%= link_to 'create thing', new_thing_path %>
+          <%= link_to 'user account', user_path( @current_user.id ) %>
+          <%= link_to 'logout', login_path, method: 'delete' %>
+        <% else %>
+          <%= link_to 'login', login_path %>
+          <%= link_to 'signup', new_user_path %>
+        <% end %>
       </nav>
     </header>
 
