@@ -2,27 +2,38 @@
 <h3>added by <%= @thing.user.name %></h3>
 
 <p>
-  <%= @thing.name %> <br>
-  Quantity - <%= @thing.quantity %> <br>
-  <%= @thing.act %>
-</p>
-<p>
   Location - <%= @thing.location %>
 </p>
+<br>
+<p>
+  <%= @thing.description %>
+</p>
+<br>
 
 <% if @thing.image.present? %>
   <%= image_tag @thing.image %>
+   <br>
 <% end %>
 <br>
 
 <%# link_to 'message user', new_message_path %>
-<h4>Message <%= @thing.user.name %></h4>
-<%= render partial: 'messages/form' %>
-
-<br>
-<br>
 
 <% if @thing.user_id == @current_user.id %>
   <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>
   <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
+  <br><br>
+  <h4>Messages:</h4>
+  <% @thing.messages.each do |m| %>
+  <h3>from <%= User.find(m.user_id).name %></h3>
+  subject: <%= m.subject %>
+  <br>
+  message: <%= m.message %>
+  <br>
+  <%= link_to 'reply', 'placehold' %>
+  <br><br>
+  <% end %>
+  <% else %>
+  <h4>Message <%= @thing.user.name %></h4>
+  <%= render partial: 'messages/form' %>
+
 <% end %>

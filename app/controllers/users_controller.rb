@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    check_if_logged_in
     @user = User.find params[:id]
   end
 
@@ -41,6 +42,11 @@ class UsersController < ApplicationController
   def destroy
     User.destroy params[:id]
     redirect_to login_path
+  end
+
+  def account
+    check_if_logged_in
+    @user = @current_user
   end
 
   private

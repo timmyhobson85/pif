@@ -15,6 +15,7 @@ class ThingsController < ApplicationController
   def show
     @thing = Thing.find params[:id]
     @message = Message.new
+    # binding.pry
   end
 
   def edit

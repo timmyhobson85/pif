@@ -1,21 +1,17 @@
 <%= form_for @message do |f| %>
-
-<%= f.label "To #{@thing.user.name}" %>
 <%= f.hidden_field :to_id, :value => "#{@thing.user_id}" %>
-<%= f.hidden_field :item_id, :value => "#{@thing.id}" %>
-<br>
+<%= f.hidden_field :thing_id, :value => "#{@thing.id}" %>
 
 <%# f.label :to_id %>
 <%# f.text_field :to_id, :placeholder => 'luke', :value => @thing.user_id %>
 <br>
-
 <%= f.label :subject %>
 <%= f.text_field :subject %>
-<br>
+<br><br>
 
 <%= f.label :message %>
 <%= f.text_area :message %>
-<br>
+<br><br>
 
 <%= f.submit %>
 <% end %>
