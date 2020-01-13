@@ -8,7 +8,7 @@
 <%= f.select :act, Thing.acts.keys %>
 <br>
 <%= f.label :condition %>
-<%= f.select :condition, ['new', 'used'] %>
+<%= f.select :condition, Thing.conditions.keys %>
 <br>
 <%= f.label :urgency %>
 <%= f.select :urgency, Thing.urgencies.keys %>

@@ -2,6 +2,7 @@
 
 <%= f.label "To #{@thing.user.name}" %>
 <%= f.hidden_field :to_id, :value => "#{@thing.user_id}" %>
+<%= f.hidden_field :item_id, :value => "#{@thing.id}" %>
 <br>
 
 <%# f.label :to_id %>

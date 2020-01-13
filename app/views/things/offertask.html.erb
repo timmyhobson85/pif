@@ -1,6 +1,9 @@
 <%= form_for @thing do |f| %>
 
 <%# act = 1 ('offer'), thing_type = 1 ('task') %>
+<%= f.hidden_field :act, :value => 'offer' %>
+<%= f.hidden_field :things_type, :value => 'task' %>
+
 
 <%= f.label :name %>
 <%= f.text_field :name %>
@@ -9,7 +12,7 @@
 <%= f.text_area :description %>
 <br>
 <%= f.label :location %>
-<%= f.text_field :location %>
+<%= f.text_field :location, value: "#{@current_user.location}" %>
 <br>
 <%= f.submit %>
 <% end %>

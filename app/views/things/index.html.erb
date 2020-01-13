@@ -1,10 +1,45 @@
-<h2>List of Items/Tasks</h2>
+<h2>current listings</h2>
 
+<h3>people in need</h3>
+<h4>tasks</h4>
 <ul>
   <% @things.each do |t| %>
-  <li>
-    <%# link_to "#{t.act} - #{t.name} - #{t.quantity}", thing_path(t.id) %>
-    <%= link_to "#{t.act} - #{t.name} - #{t.quantity} - #{t.user.name}", thing_path(t.id) %>
-  </li>
+    <% if t.user != @current_user && t.act == 'need' && t.thing_type == 'task'%>
+    <li>
+      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
+    </li>
+    <% end %>
+  <% end %>
+</ul>
+<h4>items</h4>
+<ul>
+  <% @things.each do |t| %>
+    <% if t.user != @current_user && t.act == 'need' && t.thing_type == 'item' %>
+    <li>
+      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
+    </li>
+    <% end %>
+  <% end %>
+</ul>
+
+<h3>on offer</h3>
+<h4>items</h4>
+<ul>
+  <% @things.each do |t| %>
+    <% if t.user != @current_user && t.act == 'offer' && t.thing_type == 'task' %>
+    <li>
+      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
+    </li>
+    <% end %>
+  <% end %>
+</ul>
+<h4>tasks</h4>
+<ul>
+  <% @things.each do |t| %>
+    <% if t.user != @current_user && t.act == 'offer' && t.thing_type == 'item' %>
+    <li>
+      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
+    </li>
+    <% end %>
   <% end %>
 </ul>

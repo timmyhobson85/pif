@@ -1,5 +1,6 @@
 class Thing < ApplicationRecord
   belongs_to :user, optional: true
+  has_many :messages
 
   enum act: [:need, :offer]
   enum thing_type: [:item, :task]

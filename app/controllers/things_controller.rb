@@ -55,7 +55,7 @@ class ThingsController < ApplicationController
   private
 
   def thing_params
-    params.require(:thing).permit(:name, :act, :quantity, :image, :user_id)
+    params.require(:thing).permit(:name, :act, :quantity, :image, :user_id, :condition, :urgency, :location, :description, :thing_type)
   end
 
   def check_ownership

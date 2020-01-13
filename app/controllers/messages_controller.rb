@@ -6,6 +6,9 @@ class MessagesController < ApplicationController
   def create
     message = Message.create message_params
     @current_user.messages << message
+    # @thing = Thing.find params[:message][:item_id]
+    # @thing << message
+    # raise 'hell'
     redirect_to messages_path
   end
 
@@ -29,6 +32,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit( :message, :subject, :to_id )
+    params.require(:message).permit( :message, :subject, :to_id)
   end
 end

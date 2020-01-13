@@ -1,6 +1,9 @@
 <%= form_for @thing do |f| %>
 
 <%# act = 0 ('need'), thing_type = 1 ('task') %>
+<%= f.hidden_field :act, :value => 'need' %>
+<%= f.hidden_field :things_type, :value => 'task' %>
+
 
 <%= f.label :name %>
 <%= f.text_field :name %>
@@ -12,7 +15,7 @@
 <%= f.select :urgency, Thing.urgencies.keys %>
 <br>
 <%= f.label :location %>
-<%= f.text_field :location %>
+<%= f.text_field :location, value: "#{@current_user.location}" %>
 <br>
 <%= f.label :image %>
 <%= f.text_area :image %>

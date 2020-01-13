@@ -8,8 +8,8 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
-  <body>
+  <div id="container">
+    <body>
     <header>
       <h1>pif - pay it forward</h1>
       <nav>
@@ -28,14 +28,15 @@
     </header>
 
 
-
+    <div id="yield">
     <%= yield %>
+    </div>
 
     <footer>
       <p>
         &copy; timmy hobson 2020
       </p>
     </footer>
-
   </body>
+</div>
 </html>
