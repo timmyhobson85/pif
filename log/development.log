@@ -16894,3 +16894,2538 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 2.7ms)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToBeIntegerInThings (20200113001221)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113001221"]]
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (1.1ms)[0m  [1m[32mINSERT INTO "things" ("name", "act", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "wow"], ["act", "1"], ["created_at", "2020-01-13 00:18:06.921553"], ["updated_at", "2020-01-13 00:18:06.921553"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.5ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 56]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 60]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 58]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 59]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.6ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 57]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 61]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "act", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Food"], ["act", "need"], ["created_at", "2020-01-13 00:19:33.294411"], ["updated_at", "2020-01-13 00:19:33.294411"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.7ms)[0m  [1m[32mINSERT INTO "things" ("name", "act", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Food"], ["act", "1"], ["created_at", "2020-01-13 00:19:36.601272"], ["updated_at", "2020-01-13 00:19:36.601272"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "act", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Food"], ["act", "1"], ["created_at", "2020-01-13 00:19:39.500057"], ["updated_at", "2020-01-13 00:19:39.500057"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/users/54" for ::1 at 2020-01-13 11:24:29 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/timhobson85/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 54]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 54], ["act", "need"]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 54], ["act", "offer"]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 54]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 54]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (27.6ms)
+Completed 200 OK in 97ms (Views: 56.1ms | ActiveRecord: 15.4ms)
+
+
+  [1m[36mThing Load (1.0ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 63]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 64]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 62]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToIntegerInThings (20200113002605)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (7.3ms)[0m  [1m[35mALTER TABLE "things" ALTER COLUMN "act" TYPE integer[0m
+  ↳ db/migrate/20200113002605_change_act_to_integer_in_things.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToIntegerInThings (20200113002605)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToIntegerInThings (20200113002605)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "things" RENAME COLUMN "act" TO "act_del"[0m
+  ↳ db/migrate/20200113002605_change_act_to_integer_in_things.rb:3
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "things" ADD "act" integer[0m
+  ↳ db/migrate/20200113002605_change_act_to_integer_in_things.rb:4
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "things" DROP COLUMN "act_del"[0m
+  ↳ db/migrate/20200113002605_change_act_to_integer_in_things.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113002605"]]
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActInThingsToActdel (20200113003302)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "things" RENAME COLUMN "act" TO "actdel"[0m
+  ↳ db/migrate/20200113003302_change_act_in_things_to_actdel.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113003302"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToIntegerInThings2 (20200113003500)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "things" ALTER COLUMN "act" TYPE integer[0m
+  ↳ db/migrate/20200113003500_change_act_to_integer_in_things_2.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToIntegerInThings2 (20200113003500)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "things" ALTER COLUMN "act" TYPE integer[0m
+  ↳ db/migrate/20200113003500_change_act_to_integer_in_things_2.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to ChangeActToIntegerInThings2 (20200113003500)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "things" RENAME COLUMN "actdel" TO "act"[0m
+  ↳ db/migrate/20200113003500_change_act_to_integer_in_things_2.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "things" ALTER COLUMN "act" TYPE integer[0m
+  ↳ db/migrate/20200113003500_change_act_to_integer_in_things_2.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113003500"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:39:16.765781"], ["updated_at", "2020-01-13 00:39:16.765781"], ["act", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.9ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:39:33.024414"], ["updated_at", "2020-01-13 00:39:33.024414"], ["act", 0]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:39:35.346813"], ["updated_at", "2020-01-13 00:39:35.346813"], ["act", 5]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:39:56.697213"], ["updated_at", "2020-01-13 00:39:56.697213"], ["act", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:39:58.909082"], ["updated_at", "2020-01-13 00:39:58.909082"], ["act", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 65]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 66]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 67]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 68]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 69]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:42:34.789669"], ["updated_at", "2020-01-13 00:42:34.789669"], ["act", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:42:44.376123"], ["updated_at", "2020-01-13 00:42:44.376123"], ["act", 0]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 00:42:57.731716"], ["updated_at", "2020-01-13 00:42:57.731716"], ["act", 0]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/users/54" for ::1 at 2020-01-13 11:45:39 +1100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/timhobson85/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 54]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 54], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 54], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 54]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 54]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 59ms (Views: 31.6ms | ActiveRecord: 13.2ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 54]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 51]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 52]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 53]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (1.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$5LX1nim/ANyfuIQKzd0G.eOlzPoBkCj1xDo3B6dOU8RqriHcbOZz2"], ["created_at", "2020-01-13 00:47:01.174149"], ["updated_at", "2020-01-13 00:47:01.174149"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$.ukIW1guplwxEAnSu.SnW.1kJLrjUxw/XXqrm4og2wjPWg4xguuOG"], ["created_at", "2020-01-13 00:47:01.376695"], ["updated_at", "2020-01-13 00:47:01.376695"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$vqKg1kiUf/YmtWI3wZ3twe8zwdX5hkdWX91RLDMz8M1H9fX43h/2u"], ["created_at", "2020-01-13 00:47:01.592217"], ["updated_at", "2020-01-13 00:47:01.592217"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 70]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 71]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 72]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["created_at", "2020-01-13 00:47:01.617620"], ["updated_at", "2020-01-13 00:47:01.617620"], ["act", 0]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["created_at", "2020-01-13 00:47:01.620185"], ["updated_at", "2020-01-13 00:47:01.620185"], ["act", 0]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["created_at", "2020-01-13 00:47:01.622288"], ["updated_at", "2020-01-13 00:47:01.622288"], ["act", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["created_at", "2020-01-13 00:47:01.625179"], ["updated_at", "2020-01-13 00:47:01.625179"], ["act", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.2ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["created_at", "2020-01-13 00:47:01.627339"], ["updated_at", "2020-01-13 00:47:01.627339"], ["act", 0]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mThing Update (0.9ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:47:01.652775"], ["user_id", 55], ["id", 73]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mThing Update (0.8ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:47:01.656911"], ["user_id", 55], ["id", 74]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mThing Update (0.6ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:47:01.660415"], ["user_id", 56], ["id", 77]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:47:01.664589"], ["user_id", 57], ["id", 75]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:47:01.667039"], ["user_id", 57], ["id", 76]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 55]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:26
+  [1m[36mMessage Create (0.7ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 55], ["user_id", 56], ["created_at", "2020-01-13 00:47:01.687528"], ["updated_at", "2020-01-13 00:47:01.687528"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 56], ["user_id", 55], ["created_at", "2020-01-13 00:47:01.690414"], ["updated_at", "2020-01-13 00:47:01.690414"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 57], ["user_id", 55], ["created_at", "2020-01-13 00:47:01.692800"], ["updated_at", "2020-01-13 00:47:01.692800"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+Started GET "/users/54" for ::1 at 2020-01-13 11:47:04 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for ::1 at 2020-01-13 11:47:04 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-01-13 11:47:10 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OvOMqX6Z4I11gQHXNq2M9d3GMRJrHzeFFxQtWz1WchLIU4aXSTnMFKN6kFBEti5XrCMjmvodMIZcCT7Seg9Qxg==", "email"=>"tim@test.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/users/55
+Completed 302 Found in 225ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/55" for ::1 at 2020-01-13 11:47:10 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 55]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 55], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 55], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 55]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 55]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/things/74" for ::1 at 2020-01-13 11:47:18 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (3.3ms)
+  Rendered things/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 48ms (Views: 30.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/things/74/edit" for ::1 at 2020-01-13 11:47:21 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (10.3ms)
+  Rendered things/edit.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `act' for #<Class:0x007fcff17b7cf8>
+Did you mean?  acts):
+     5: <br>
+     6: 
+     7: <%= f.label :act %>
+     8: <%= f.select :act, Thing.act.keys %>
+     9: 
+    10: <%= f.label :quantity %>
+    11: <%= f.text_field :quantity %>
+  
+app/views/things/_form.html.erb:8:in `block in _app_views_things__form_html_erb__2432392746655891392_70265533229560'
+app/views/things/_form.html.erb:1:in `_app_views_things__form_html_erb__2432392746655891392_70265533229560'
+app/views/things/edit.html.erb:3:in `_app_views_things_edit_html_erb__3947097944206853220_70265549992260'
+Started POST "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b/trace" for ::1 at 2020-01-13 11:47:29 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:31 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:32 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:33 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:34 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:35 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:35 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:36 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:37 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:41 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:42 +1100
+Started PUT "/__web_console/repl_sessions/35feb8911dd23a49ac1372e78bd15a9b" for ::1 at 2020-01-13 11:47:42 +1100
+Started GET "/things/74/edit" for ::1 at 2020-01-13 11:48:25 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (12.0ms)
+  Rendered things/edit.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `act_type' for #<Class:0x007fcff17b7cf8>):
+     5: <br>
+     6: 
+     7: <%= f.label :act %>
+     8: <%= f.select :act, Thing.act_type.keys %>
+     9: 
+    10: <%= f.label :quantity %>
+    11: <%= f.text_field :quantity %>
+  
+app/views/things/_form.html.erb:8:in `block in _app_views_things__form_html_erb__2432392746655891392_70265474098540'
+app/views/things/_form.html.erb:1:in `_app_views_things__form_html_erb__2432392746655891392_70265474098540'
+app/views/things/edit.html.erb:3:in `_app_views_things_edit_html_erb__3947097944206853220_70265531336800'
+Started GET "/things/74/edit" for ::1 at 2020-01-13 11:48:29 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (5.8ms)
+  Rendered things/edit.html.erb within layouts/application (9.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `act' for #<Class:0x007fcff17b7cf8>
+Did you mean?  acts):
+     5: <br>
+     6: 
+     7: <%= f.label :act %>
+     8: <%= f.select :act, Thing.act.keys %>
+     9: 
+    10: <%= f.label :quantity %>
+    11: <%= f.text_field :quantity %>
+  
+app/views/things/_form.html.erb:8:in `block in _app_views_things__form_html_erb__2432392746655891392_70265533087220'
+app/views/things/_form.html.erb:1:in `_app_views_things__form_html_erb__2432392746655891392_70265533087220'
+app/views/things/edit.html.erb:3:in `_app_views_things_edit_html_erb__3947097944206853220_70265522696400'
+Started GET "/things/74/edit" for ::1 at 2020-01-13 11:48:35 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (5.2ms)
+  Rendered things/edit.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 36ms (Views: 29.2ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/things/74" for ::1 at 2020-01-13 11:48:57 +1100
+Processing by ThingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"21YSr9wDF528MhBmny9+BdbCKBGuF+UdQr8LTT8nl1cp9hiR66M7BGrJgeHtNNynpyc6mT8V4h4JohjEeH61gw==", "thing"=>{"name"=>"down tree", "act"=>"offer", "quantity"=>"1", "image"=>""}, "commit"=>"Update Thing", "id"=>"74"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/things_controller.rb:29
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "act" = $1, "image" = $2, "updated_at" = $3 WHERE "things"."id" = $4[0m  [["act", 1], ["image", ""], ["updated_at", "2020-01-13 00:48:57.655851"], ["id", 74]]
+  ↳ app/controllers/things_controller.rb:29
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/things_controller.rb:29
+Redirected to http://localhost:3000/things/74
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/things/74" for ::1 at 2020-01-13 11:48:57 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (3.2ms)
+  Rendered things/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 38ms (Views: 29.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/things/74/edit" for ::1 at 2020-01-13 11:49:01 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (2.6ms)
+  Rendered things/edit.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 47ms (Views: 36.9ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/things/74" for ::1 at 2020-01-13 11:49:04 +1100
+Processing by ThingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B8ft8XJlURNSpbPqGtScOp6gdSxwRB3C743uzAkRpvf1Z+fPRcV9ioReIm1ozz6Y70VnpOFGGsGkkP1FTkiEIw==", "thing"=>{"name"=>"down tree", "act"=>"need", "quantity"=>"1", "image"=>""}, "commit"=>"Update Thing", "id"=>"74"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/things_controller.rb:29
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "act" = $1, "updated_at" = $2 WHERE "things"."id" = $3[0m  [["act", 0], ["updated_at", "2020-01-13 00:49:04.045324"], ["id", 74]]
+  ↳ app/controllers/things_controller.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/things_controller.rb:29
+Redirected to http://localhost:3000/things/74
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/things/74" for ::1 at 2020-01-13 11:49:04 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (2.5ms)
+  Rendered things/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 31ms (Views: 25.4ms | ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddThingTypeToThings (20200113005301)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "things" ADD "thing_type" integer[0m
+  ↳ db/migrate/20200113005301_add_thing_type_to_things.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113005301"]]
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 55]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 56]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 57]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$sUL4SR.tydb9esfu5Ekqo.eoaAS9MKiF2fk9CRi6UFIxf.lbPDqHO"], ["created_at", "2020-01-13 00:57:23.744262"], ["updated_at", "2020-01-13 00:57:23.744262"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$P1OMMl/lDDoCiTYZ58ByruyZEmMX58saNOg56oyHobRxF9St008/m"], ["created_at", "2020-01-13 00:57:23.948573"], ["updated_at", "2020-01-13 00:57:23.948573"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$oE/0uTGJNbiZNpDq1YWpUOSdjrfhqbNQJ4153pOQr3HEG88ItQFPK"], ["created_at", "2020-01-13 00:57:24.165475"], ["updated_at", "2020-01-13 00:57:24.165475"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 73]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 77]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 75]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 76]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 74]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["created_at", "2020-01-13 00:57:24.195475"], ["updated_at", "2020-01-13 00:57:24.195475"], ["act", 0], ["thing_type", 0]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["created_at", "2020-01-13 00:57:24.197929"], ["updated_at", "2020-01-13 00:57:24.197929"], ["act", 0], ["thing_type", 1]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["created_at", "2020-01-13 00:57:24.200110"], ["updated_at", "2020-01-13 00:57:24.200110"], ["act", 1], ["thing_type", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["created_at", "2020-01-13 00:57:24.202326"], ["updated_at", "2020-01-13 00:57:24.202326"], ["act", 1], ["thing_type", 0]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["created_at", "2020-01-13 00:57:24.204823"], ["updated_at", "2020-01-13 00:57:24.204823"], ["act", 0], ["thing_type", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mThing Update (0.6ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:57:24.218704"], ["user_id", 58], ["id", 78]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:57:24.221690"], ["user_id", 58], ["id", 79]]
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mThing Update (0.6ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:57:24.224955"], ["user_id", 59], ["id", 82]]
+  ↳ db/seeds.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:57:24.228037"], ["user_id", 60], ["id", 80]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 00:57:24.230584"], ["user_id", 60], ["id", 81]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 58]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:27
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 58], ["user_id", 59], ["created_at", "2020-01-13 00:57:24.248909"], ["updated_at", "2020-01-13 00:57:24.248909"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:28
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 59], ["user_id", 58], ["created_at", "2020-01-13 00:57:24.251674"], ["updated_at", "2020-01-13 00:57:24.251674"]]
+  ↳ db/seeds.rb:28
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:28
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 60], ["user_id", 58], ["created_at", "2020-01-13 00:57:24.254566"], ["updated_at", "2020-01-13 00:57:24.254566"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[36mThing Load (1.2ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/things/74/edit" for ::1 at 2020-01-13 12:36:42 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/timhobson85/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+Completed 404 Not Found in 20ms (ActiveRecord: 10.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=74):
+  
+app/controllers/things_controller.rb:21:in `edit'
+Started GET "/things/74" for ::1 at 2020-01-13 12:36:50 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 6ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=74):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/74/edit" for ::1 at 2020-01-13 12:36:51 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=74):
+  
+app/controllers/things_controller.rb:21:in `edit'
+Started GET "/things/74" for ::1 at 2020-01-13 12:36:52 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 4ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=74):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/" for ::1 at 2020-01-13 12:36:55 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 36.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/login" for ::1 at 2020-01-13 12:37:03 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yjadp2TUCEPg6ITkk20OP+IUJUXpjOajv9fv+3m+XrU4lpeZU3Qk2jYTFWPhdqydk/E3zXiO4aD0yvxyPud8YQ==", "email"=>"tim@test.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/users/58
+Completed 302 Found in 228ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users/58" for ::1 at 2020-01-13 12:37:03 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 58]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 58], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 58], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 58]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 58]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 44ms (Views: 34.0ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/things/78" for ::1 at 2020-01-13 12:37:15 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (1.0ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (2.5ms)
+  Rendered things/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 54ms (Views: 30.9ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/things/78/edit" for ::1 at 2020-01-13 12:37:23 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (2.8ms)
+  Rendered things/edit.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 39ms (Views: 28.3ms | ActiveRecord: 2.8ms)
+
+
+Started PATCH "/things/78" for ::1 at 2020-01-13 12:37:48 +1100
+Processing by ThingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KpCGR6r32ndX+Fr90bHA4cY67l1P/18lhatL0ZvxU2jYMIx5nVf27oEDy3qjqmJDt9/81d79WCbOtlhY3KhxvA==", "thing"=>{"name"=>"dinner", "act"=>"offer", "quantity"=>"2", "image"=>""}, "commit"=>"Update Thing", "id"=>"78"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/things_controller.rb:29
+  [1m[36mThing Update (0.7ms)[0m  [1m[33mUPDATE "things" SET "act" = $1, "image" = $2, "updated_at" = $3 WHERE "things"."id" = $4[0m  [["act", 1], ["image", ""], ["updated_at", "2020-01-13 01:37:48.702567"], ["id", 78]]
+  ↳ app/controllers/things_controller.rb:29
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/things_controller.rb:29
+Redirected to http://localhost:3000/things/78
+Completed 302 Found in 13ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/things/78" for ::1 at 2020-01-13 12:37:48 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (1.2ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (13.7ms)
+  Rendered things/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 48ms (Views: 39.2ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food"], ["created_at", "2020-01-13 01:41:23.084733"], ["updated_at", "2020-01-13 01:41:23.084733"], ["act", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "act") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "food21"], ["created_at", "2020-01-13 01:41:32.933790"], ["updated_at", "2020-01-13 01:41:32.933790"], ["act", 0]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddColumnsToThings (20200113032944)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "things" ADD "location" character varying[0m
+  ↳ db/migrate/20200113032944_add_columns_to_things.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "things" ADD "condition" integer[0m
+  ↳ db/migrate/20200113032944_add_columns_to_things.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "things" ADD "urgency" integer[0m
+  ↳ db/migrate/20200113032944_add_columns_to_things.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "things" ADD "description" text[0m
+  ↳ db/migrate/20200113032944_add_columns_to_things.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113032944"]]
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/things/78" for ::1 at 2020-01-13 14:32:57 +1100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/timhobson85/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 7.2ms)
+
+
+  
+ArgumentError (You tried to define an enum named "condition" on the model "Thing", but this will generate a class method "new", which is already defined by Active Record.):
+  
+app/models/thing.rb:6:in `<class:Thing>'
+app/models/thing.rb:1:in `<main>'
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/78" for ::1 at 2020-01-13 14:35:36 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (5.1ms)
+  Rendered things/show.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 112ms (Views: 50.3ms | ActiveRecord: 17.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 58]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 59]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 60]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$shwuybFPbvQtrnxLAgGzr.Uzi70GwQ0r4V6qg40.Ts28y.euAS55u"], ["created_at", "2020-01-13 03:38:52.199910"], ["updated_at", "2020-01-13 03:38:52.199910"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$7cGsztaIwqktQVzmLo44lu3jtm/cpQLfEQiyim3.HXDz/WEc5DAwa"], ["created_at", "2020-01-13 03:38:52.405601"], ["updated_at", "2020-01-13 03:38:52.405601"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$pr/BIHp4.k79IXbEkUbfgu0GRp/opwtIiCm7/uxAJy2WFPw5TAcfC"], ["created_at", "2020-01-13 03:38:52.612222"], ["updated_at", "2020-01-13 03:38:52.612222"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 79]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (6.6ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 82]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 80]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 81]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 78]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 83]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 84]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["created_at", "2020-01-13 03:38:52.657477"], ["updated_at", "2020-01-13 03:38:52.657477"], ["act", 0], ["thing_type", 0], ["urgency", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["created_at", "2020-01-13 03:38:52.659616"], ["updated_at", "2020-01-13 03:38:52.659616"], ["act", 0], ["thing_type", 1], ["urgency", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.2ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["created_at", "2020-01-13 03:38:52.661119"], ["updated_at", "2020-01-13 03:38:52.661119"], ["act", 1], ["thing_type", 1]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mThing Create (0.2ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "condition") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["created_at", "2020-01-13 03:38:52.662610"], ["updated_at", "2020-01-13 03:38:52.662610"], ["act", 1], ["thing_type", 0], ["condition", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mThing Create (0.2ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["created_at", "2020-01-13 03:38:52.663908"], ["updated_at", "2020-01-13 03:38:52.663908"], ["act", 0], ["thing_type", 1], ["urgency", 0]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:38:52.675529"], ["user_id", 61], ["id", 85]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:38:52.678363"], ["user_id", 61], ["id", 86]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:38:52.680794"], ["user_id", 62], ["id", 89]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:38:52.683099"], ["user_id", 63], ["id", 87]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:38:52.685337"], ["user_id", 63], ["id", 88]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 61], ["user_id", 62], ["created_at", "2020-01-13 03:38:52.701557"], ["updated_at", "2020-01-13 03:38:52.701557"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 62], ["user_id", 61], ["created_at", "2020-01-13 03:38:52.704127"], ["updated_at", "2020-01-13 03:38:52.704127"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMessage Create (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 63], ["user_id", 61], ["created_at", "2020-01-13 03:38:52.705645"], ["updated_at", "2020-01-13 03:38:52.705645"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+Started GET "/things/78" for ::1 at 2020-01-13 14:39:00 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 5ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=78):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/" for ::1 at 2020-01-13 14:39:06 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 45ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2020-01-13 14:39:23 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"64EJwK4cQyRjOFqppqS4cV3b2vTpS8OXqfIsxmJ/gqkZIQP+mbxvvbXDyy7UvxrTLD7IfHhJxJTi7z9PJSagfQ==", "email"=>"tim@test.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/users/61
+Completed 302 Found in 214ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/61" for ::1 at 2020-01-13 14:39:23 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 61], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 61], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 31ms (Views: 25.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/things/85" for ::1 at 2020-01-13 14:39:27 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (1.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (3.0ms)
+  Rendered things/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 40ms (Views: 27.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/61" for ::1 at 2020-01-13 14:39:29 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 61], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 61], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 61]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 38ms (Views: 26.2ms | ActiveRecord: 4.6ms)
+
+
+  [1m[36mThing Load (1.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 61]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 62]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 63]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$EnO3..3wQIWvgqWEwBee5ulNBhCmlq6Z4szc6cWTxr.P8dTMD6CgK"], ["created_at", "2020-01-13 03:41:30.599154"], ["updated_at", "2020-01-13 03:41:30.599154"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$hQqdR9S5C.sdbh.lrhdnNeYnGde.yVMToh9OGAuSOeCzHsI74pHNi"], ["created_at", "2020-01-13 03:41:30.804657"], ["updated_at", "2020-01-13 03:41:30.804657"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$5WkCJrJN2..zfD/QSXwCQujNNQ5XzwLw7WDeWgb88drIKZzfL4/Cu"], ["created_at", "2020-01-13 03:41:31.005486"], ["updated_at", "2020-01-13 03:41:31.005486"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 85]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 86]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 89]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 87]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 88]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["created_at", "2020-01-13 03:41:31.048872"], ["updated_at", "2020-01-13 03:41:31.048872"], ["act", 0], ["thing_type", 0], ["location", "bankstown"], ["urgency", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["created_at", "2020-01-13 03:41:31.051837"], ["updated_at", "2020-01-13 03:41:31.051837"], ["act", 0], ["thing_type", 1], ["location", "katoomba"], ["urgency", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["created_at", "2020-01-13 03:41:31.054463"], ["updated_at", "2020-01-13 03:41:31.054463"], ["act", 1], ["thing_type", 1], ["location", "braidwood"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "condition") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["created_at", "2020-01-13 03:41:31.056484"], ["updated_at", "2020-01-13 03:41:31.056484"], ["act", 1], ["thing_type", 0], ["location", "batemans bay"], ["condition", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mThing Create (0.2ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["created_at", "2020-01-13 03:41:31.058581"], ["updated_at", "2020-01-13 03:41:31.058581"], ["act", 0], ["thing_type", 1], ["location", "lithgow"], ["urgency", 0]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:41:31.071580"], ["user_id", 64], ["id", 90]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:41:31.073743"], ["user_id", 64], ["id", 91]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:41:31.075745"], ["user_id", 65], ["id", 94]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:41:31.077545"], ["user_id", 66], ["id", 92]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:41:31.079274"], ["user_id", 66], ["id", 93]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 64]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 64], ["user_id", 65], ["created_at", "2020-01-13 03:41:31.094670"], ["updated_at", "2020-01-13 03:41:31.094670"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 65], ["user_id", 64], ["created_at", "2020-01-13 03:41:31.096794"], ["updated_at", "2020-01-13 03:41:31.096794"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 66], ["user_id", 64], ["created_at", "2020-01-13 03:41:31.098488"], ["updated_at", "2020-01-13 03:41:31.098488"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+Started GET "/users/61" for ::1 at 2020-01-13 14:41:51 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/login" for ::1 at 2020-01-13 14:41:51 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 64]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 65]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 66]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$JXiPA7T3.7zDODcm40qpeeLeXPBZacgateh4JU4ApcIjJ.pzb.V3a"], ["created_at", "2020-01-13 03:42:03.269940"], ["updated_at", "2020-01-13 03:42:03.269940"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$d2j.dJa2XC6RObw4Rmr0g.UO8Py/T88TcP46JIdlvId./9E3dJSlC"], ["created_at", "2020-01-13 03:42:03.485893"], ["updated_at", "2020-01-13 03:42:03.485893"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$ReFRKHjFXL3BdmyVua9A4uegKX2myJObsS5wXnYaZ63slPuwyi1HK"], ["created_at", "2020-01-13 03:42:03.701722"], ["updated_at", "2020-01-13 03:42:03.701722"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 90]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 91]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 94]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 92]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 93]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["created_at", "2020-01-13 03:42:03.738351"], ["updated_at", "2020-01-13 03:42:03.738351"], ["act", 0], ["thing_type", 0], ["location", "bankstown"], ["urgency", 1]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["created_at", "2020-01-13 03:42:03.740456"], ["updated_at", "2020-01-13 03:42:03.740456"], ["act", 0], ["thing_type", 1], ["location", "katoomba"], ["urgency", 1]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["created_at", "2020-01-13 03:42:03.742395"], ["updated_at", "2020-01-13 03:42:03.742395"], ["act", 1], ["thing_type", 1], ["location", "braidwood"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "condition") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["created_at", "2020-01-13 03:42:03.744222"], ["updated_at", "2020-01-13 03:42:03.744222"], ["act", 1], ["thing_type", 0], ["location", "batemans bay"], ["condition", 1]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["created_at", "2020-01-13 03:42:03.746021"], ["updated_at", "2020-01-13 03:42:03.746021"], ["act", 0], ["thing_type", 1], ["location", "lithgow"], ["urgency", 0]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:03.753920"], ["user_id", 67], ["id", 95]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:03.756966"], ["user_id", 67], ["id", 96]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:03.759121"], ["user_id", 68], ["id", 99]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:03.761231"], ["user_id", 69], ["id", 97]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:03.763074"], ["user_id", 69], ["id", 98]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 67]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 67], ["user_id", 68], ["created_at", "2020-01-13 03:42:03.779469"], ["updated_at", "2020-01-13 03:42:03.779469"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 68], ["user_id", 67], ["created_at", "2020-01-13 03:42:03.782229"], ["updated_at", "2020-01-13 03:42:03.782229"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 69], ["user_id", 67], ["created_at", "2020-01-13 03:42:03.785296"], ["updated_at", "2020-01-13 03:42:03.785296"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/login" for ::1 at 2020-01-13 14:42:30 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mThing Load (1.9ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 67]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 68]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 69]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$53oRut.GKz5JktBguF4po.ZT/lkfirTOIdDVfl81ih8tyXGIed85K"], ["created_at", "2020-01-13 03:42:41.215782"], ["updated_at", "2020-01-13 03:42:41.215782"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$qlE2.fIzWF0vNrWWpHva4.hFXCFLmVS5FoGaX4S.b34zh.8bC4Hoi"], ["created_at", "2020-01-13 03:42:41.421149"], ["updated_at", "2020-01-13 03:42:41.421149"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$g89ejVU6eVNEoaU5ncfsTOqdQI8.Lv7OJdAp.TgmdEmLOMvRWvoEy"], ["created_at", "2020-01-13 03:42:41.623853"], ["updated_at", "2020-01-13 03:42:41.623853"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (1.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 95]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 96]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 99]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 97]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 98]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["created_at", "2020-01-13 03:42:41.658798"], ["updated_at", "2020-01-13 03:42:41.658798"], ["act", 0], ["thing_type", 0], ["location", "bankstown"], ["urgency", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["created_at", "2020-01-13 03:42:41.661179"], ["updated_at", "2020-01-13 03:42:41.661179"], ["act", 0], ["thing_type", 1], ["location", "katoomba"], ["urgency", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["created_at", "2020-01-13 03:42:41.662939"], ["updated_at", "2020-01-13 03:42:41.662939"], ["act", 1], ["thing_type", 1], ["location", "braidwood"], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "condition", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["created_at", "2020-01-13 03:42:41.664956"], ["updated_at", "2020-01-13 03:42:41.664956"], ["act", 1], ["thing_type", 0], ["location", "batemans bay"], ["condition", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["created_at", "2020-01-13 03:42:41.667442"], ["updated_at", "2020-01-13 03:42:41.667442"], ["act", 0], ["thing_type", 1], ["location", "lithgow"], ["urgency", 0], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (1.0ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:41.681284"], ["user_id", 70], ["id", 100]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.6ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:41.685633"], ["user_id", 70], ["id", 101]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:41.689016"], ["user_id", 71], ["id", 104]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:41.692191"], ["user_id", 72], ["id", 102]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.9ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:42:41.695065"], ["user_id", 72], ["id", 103]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 70]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (0.7ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 70], ["user_id", 71], ["created_at", "2020-01-13 03:42:41.716804"], ["updated_at", "2020-01-13 03:42:41.716804"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 71], ["user_id", 70], ["created_at", "2020-01-13 03:42:41.719861"], ["updated_at", "2020-01-13 03:42:41.719861"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 72], ["user_id", 70], ["created_at", "2020-01-13 03:42:41.722370"], ["updated_at", "2020-01-13 03:42:41.722370"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[36mThing Load (2.2ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" ORDER BY "things"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/login" for ::1 at 2020-01-13 14:48:20 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 70]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 71]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 72]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$hduFyXS07jO3FazpK2cXkencxYwmDvd3oBP43S/356wg8xlMWazZi"], ["created_at", "2020-01-13 03:48:29.664714"], ["updated_at", "2020-01-13 03:48:29.664714"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$yB6uK/Y1tTbKHmoBKwFLbeHdWEJ8sEee8.93JEqrU94QoRElM01mW"], ["created_at", "2020-01-13 03:48:29.867903"], ["updated_at", "2020-01-13 03:48:29.867903"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$PGLzeeZaErdqXisC9Ov.iODkpWMsBx1ia9w2/fCYwnjFsFmpMYL9."], ["created_at", "2020-01-13 03:48:30.076870"], ["updated_at", "2020-01-13 03:48:30.076870"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.4ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 100]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 101]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 104]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 102]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 103]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.6ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["image", "item.jpg"], ["created_at", "2020-01-13 03:48:30.110631"], ["updated_at", "2020-01-13 03:48:30.110631"], ["act", 0], ["thing_type", 0], ["location", "bankstown"], ["urgency", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["image", "task.jpg"], ["created_at", "2020-01-13 03:48:30.114621"], ["updated_at", "2020-01-13 03:48:30.114621"], ["act", 0], ["thing_type", 1], ["location", "katoomba"], ["urgency", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.5ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["image", "item.jpg"], ["created_at", "2020-01-13 03:48:30.117611"], ["updated_at", "2020-01-13 03:48:30.117611"], ["act", 1], ["thing_type", 1], ["location", "braidwood"], ["description", "place holder text describing said task"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "condition", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["image", "item.jpg"], ["created_at", "2020-01-13 03:48:30.120404"], ["updated_at", "2020-01-13 03:48:30.120404"], ["act", 1], ["thing_type", 0], ["location", "batemans bay"], ["condition", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["image", "task.jpg"], ["created_at", "2020-01-13 03:48:30.123029"], ["updated_at", "2020-01-13 03:48:30.123029"], ["act", 0], ["thing_type", 1], ["location", "lithgow"], ["urgency", 0], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.8ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:48:30.137805"], ["user_id", 73], ["id", 105]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:48:30.141584"], ["user_id", 73], ["id", 106]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mThing Update (0.3ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:48:30.144529"], ["user_id", 74], ["id", 109]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:48:30.146748"], ["user_id", 75], ["id", 107]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 03:48:30.149353"], ["user_id", 75], ["id", 108]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (1.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 73], ["user_id", 74], ["created_at", "2020-01-13 03:48:30.169562"], ["updated_at", "2020-01-13 03:48:30.169562"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 74], ["user_id", 73], ["created_at", "2020-01-13 03:48:30.174040"], ["updated_at", "2020-01-13 03:48:30.174040"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMessage Create (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 75], ["user_id", 73], ["created_at", "2020-01-13 03:48:30.176406"], ["updated_at", "2020-01-13 03:48:30.176406"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+Started POST "/login" for ::1 at 2020-01-13 14:48:35 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zYRbjcn+lDO0htAJJ1yS/sF01DOH9etzlFtoHTr18fY/JFGz/l64qmJ9QY5VRzBcsJHGuxb37HDfRnuUfazTIg==", "email"=>"tim@test.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/users/73
+Completed 302 Found in 215ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 14:48:35 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 35.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/things/105" for ::1 at 2020-01-13 14:48:37 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (1.1ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (2.3ms)
+  Rendered things/show.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 79ms (Views: 71.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 14:48:38 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 39ms (Views: 28.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/things/106" for ::1 at 2020-01-13 14:48:39 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"106"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 106], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (2.2ms)
+  Rendered things/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 34ms (Views: 27.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 14:48:42 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 130ms (Views: 116.1ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/login" for ::1 at 2020-01-13 14:48:43 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 14:48:43 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 35ms (Views: 27.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/login" for ::1 at 2020-01-13 14:48:44 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 22.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for ::1 at 2020-01-13 14:50:49 +1100
+Processing by SessionController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 34ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2020-01-13 14:50:57 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bedDPxT2VlvkWM8t/iYmDNl6d1X+4j1W20EFCulc8WufR0kBI1Z6wjKjXqqMPYSuqJ9l3W/gOlWQXBaDrgXTvw==", "email"=>"tim@test.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/users/73
+Completed 302 Found in 217ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 14:50:57 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/things/105" for ::1 at 2020-01-13 14:51:02 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (2.8ms)
+  Rendered things/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 40ms (Views: 30.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:51:08 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (15.0ms)
+  Rendered things/edit.html.erb within layouts/application (17.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `condition' for #<Class:0x007fcff012b700>
+Did you mean?  conditions
+               connection):
+     8: <%= f.select :act, Thing.acts.keys %>
+     9: 
+    10: <%= f.label :condition %>
+    11: <%= f.select :condition, Thing.condition.keys %>
+    12: 
+    13: <%= f.label :urgency %>
+    14: <%= f.select :urgency, Thing.urgency.keys %>
+  
+app/views/things/_form.html.erb:11:in `block in _app_views_things__form_html_erb__2432392746655891392_70265542966960'
+app/views/things/_form.html.erb:1:in `_app_views_things__form_html_erb__2432392746655891392_70265542966960'
+app/views/things/edit.html.erb:3:in `_app_views_things_edit_html_erb__3947097944206853220_70265543032000'
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:51:16 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (12.3ms)
+  Rendered things/edit.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `urgencys' for #<Class:0x007fcff012b700>
+Did you mean?  urgencies):
+    11: <%= f.select :condition, Thing.conditions.keys %>
+    12: 
+    13: <%= f.label :urgency %>
+    14: <%= f.select :urgency, Thing.urgencys.keys %>
+    15: 
+    16: <%= f.label :location %>
+    17: <%= f.text_field :location %>
+  
+app/views/things/_form.html.erb:14:in `block in _app_views_things__form_html_erb__2432392746655891392_70265517186980'
+app/views/things/_form.html.erb:1:in `_app_views_things__form_html_erb__2432392746655891392_70265517186980'
+app/views/things/edit.html.erb:3:in `_app_views_things_edit_html_erb__3947097944206853220_70265530847640'
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:51:20 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (4.9ms)
+  Rendered things/edit.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 48ms (Views: 41.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:51:30 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (1.2ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (7.7ms)
+  Rendered things/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 46ms (Views: 36.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:51:55 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (9.5ms)
+  Rendered things/edit.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `merge' for "used":String):
+     8: <%= f.select :act, Thing.acts.keys %>
+     9: <br>
+    10: <%= f.label :condition %>
+    11: <%= f.select :condition, 'new', 'used' %>
+    12: <br>
+    13: <%= f.label :urgency %>
+    14: <%= f.select :urgency, Thing.urgencies.keys %>
+  
+app/views/things/_form.html.erb:11:in `block in _app_views_things__form_html_erb__2432392746655891392_70265469856300'
+app/views/things/_form.html.erb:1:in `_app_views_things__form_html_erb__2432392746655891392_70265469856300'
+app/views/things/edit.html.erb:3:in `_app_views_things_edit_html_erb__3947097944206853220_70265522408400'
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:52:06 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.9ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (4.8ms)
+  Rendered things/edit.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 44ms (Views: 35.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:52:47 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (4.0ms)
+  Rendered things/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:52:53 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (4.8ms)
+  Rendered things/edit.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 40ms (Views: 30.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/things/105/edit" for ::1 at 2020-01-13 14:53:46 +1100
+Processing by ThingsController#edit as HTML
+  Parameters: {"id"=>"105"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 105], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:21
+  Rendering things/edit.html.erb within layouts/application
+  Rendered things/_form.html.erb (4.8ms)
+  Rendered things/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/messages" for ::1 at 2020-01-13 14:53:53 +1100
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:3
+  Rendered messages/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 14:53:54 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 37ms (Views: 28.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 14:53:56 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/_form.html.erb (4.6ms)
+  Rendered things/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things" for ::1 at 2020-01-13 14:53:57 +1100
+Processing by ThingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/index.html.erb within layouts/application
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ app/views/things/index.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  Rendered things/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 40ms (Views: 32.9ms | ActiveRecord: 1.5ms)
+
+

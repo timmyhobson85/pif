@@ -5,14 +5,26 @@
 <br>
 
 <%= f.label :act %>
-<%= f.select :act, ['need', 'offer'] %>
-
+<%= f.select :act, Thing.acts.keys %>
+<br>
+<%= f.label :condition %>
+<%= f.select :condition, ['new', 'used'] %>
+<br>
+<%= f.label :urgency %>
+<%= f.select :urgency, Thing.urgencies.keys %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
 <%= f.label :quantity %>
 <%= f.text_field :quantity %>
-
+<br>
 <%= f.label :image %>
 <%= f.text_field :image %>
-
+<br>
 <%= f.submit %>
 
 <% end %>
