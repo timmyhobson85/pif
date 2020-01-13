@@ -14,7 +14,7 @@
     <% @user.things.each do |t| %>
       <% if t.user_id == @current_user.id %>
       <li>
-        <%= link_to "#{t.act} - #{t.name}: #{t.messages.count} messages", thing_path(t.id) %>
+        <%= link_to "#{t.act} - #{t.name}: #{t.messages.count}msgs", thing_path(t.id) %>
       </li>
       <% end %>
     <% end %>

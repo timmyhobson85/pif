@@ -12,6 +12,14 @@ class MessagesController < ApplicationController
     redirect_to messages_path
   end
 
+  # def createreply
+  #   @message = Message.find params[:id]
+  #   @reply = Message.create reply_params
+  #   @current_user.messages << reply
+  #   @thing = Thing.find params[:thing_id]
+  #   @thing.messages << reply
+  # end
+
   def show
     @message = Message.find params[:id]
     @reply = Message.new

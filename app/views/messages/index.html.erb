@@ -3,7 +3,7 @@
 <% @messages.each do |m| %>
 <ul>
   <% if m.to_id == @current_user.id %>
-  <li><%= link_to m.subject, message_path( m.id ) %></li>
+  <li><%= link_to "#{m.subject} :#{m.user.name}", message_path( m.id ) %></li>
   <% end %>
 </ul>
 <% end %>
