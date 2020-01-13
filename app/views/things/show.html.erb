@@ -10,6 +10,13 @@
 <% if @thing.image.present? %>
   <%= image_tag @thing.image %>
 <% end %>
+<br>
+
+<%= link_to 'message user', new_message_path %>
+<%= render partial: 'messages/form' %>
+
+<br>
+<br>
 
 <% if @thing.user_id == @current_user.id %>
   <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>

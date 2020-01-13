@@ -3,6 +3,7 @@
 <ul>
   <% @things.each do |t| %>
   <li>
+    <%# link_to "#{t.act} - #{t.name} - #{t.quantity}", thing_path(t.id) %>
     <%= link_to "#{t.act} - #{t.name} - #{t.quantity} - #{t.user.name}", thing_path(t.id) %>
   </li>
   <% end %>

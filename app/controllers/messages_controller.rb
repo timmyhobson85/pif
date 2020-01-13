@@ -4,7 +4,8 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create message_params
+    message = Message.create message_params
+    @current_user.messages << message
     redirect_to messages_path
   end
 
@@ -28,6 +29,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:messages).permit( :message ) 
+    params.require(:message).permit( :message, :subject, :to_id )
   end
 end

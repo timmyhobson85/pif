@@ -4,7 +4,7 @@ class ThingsController < ApplicationController
   end
 
   def create
-    Thing.create name: params[:thing][:name], user: @current_user
+    thing = @current_user.things.create thing_params
     redirect_to things_path
   end
 
@@ -14,6 +14,7 @@ class ThingsController < ApplicationController
 
   def show
     @thing = Thing.find params[:id]
+    @message = Message.new
   end
 
   def edit
