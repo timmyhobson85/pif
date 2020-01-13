@@ -1,0 +1,21 @@
+<%= form_for @thing do |f| %>
+
+<%# act = 1 ('offer'), thing_type = 0 ('item') %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.label :condition %>
+<%= f.select :condition, Thing.conditions.keys %>
+<br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
+<%= f.label :image %>
+<%= f.text_field :image %>
+<br>
+<%= f.submit %>
+<% end %>

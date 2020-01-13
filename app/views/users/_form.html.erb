@@ -22,5 +22,15 @@
 <%= f.label :password_confirmation, :value => "confirm password" %>
 <%= f.password_field :password_confirmation %>
 <br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
+<%= f.label :bio %>
+<%= f.text_area :bio %>
+<br>
+<%= f.label :image %>
+<%= f.text_field :image %>
+
+<br>
 <%= f.submit %>
 <% end %>

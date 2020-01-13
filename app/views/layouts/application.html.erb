@@ -15,7 +15,7 @@
       <nav>
         <% if @current_user.present? %>
           Welcome, <%= @current_user.name %> (<%= @current_user.id %>)
-          <%= link_to 'list new item', new_thing_path %>
+          <%= link_to 'create listing', new_thing_path %>
           <%= link_to 'browse listings', things_path %>
           <%= link_to 'user account', user_path( @current_user.id ) %>
           <%= link_to 'my messages', messages_path %>

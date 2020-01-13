@@ -19479,3 +19479,1626 @@ Completed 200 OK in 118ms (Views: 100.7ms | ActiveRecord: 2.6ms)
   ↳ bin/rails:4
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddColumnsToUsers (20200113051109)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "users" ADD "location" character varying[0m
+  ↳ db/migrate/20200113051109_add_columns_to_users.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "bio" text[0m
+  ↳ db/migrate/20200113051109_add_columns_to_users.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "image" character varying[0m
+  ↳ db/migrate/20200113051109_add_columns_to_users.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200113051109"]]
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6362333681310603570)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/messages" for ::1 at 2020-01-13 16:17:31 +1100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/timhobson85/.rvm/gems/ruby-2.4.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by MessagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering messages/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/messages/index.html.erb:3
+  Rendered messages/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 100ms (Views: 63.2ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 16:17:32 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 61ms (Views: 44.5ms | ActiveRecord: 10.4ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 16:17:52 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 16:24:42 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 35ms (Views: 25.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 16:24:44 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 38ms (Views: 25.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 16:24:45 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 73], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 73]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 37ms (Views: 27.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/things" for ::1 at 2020-01-13 16:26:44 +1100
+Processing by ThingsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/index.html.erb within layouts/application
+  [1m[36mThing Load (0.9ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ app/views/things/index.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  Rendered things/index.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 68ms (Views: 60.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/things/107" for ::1 at 2020-01-13 16:26:45 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (4.5ms)
+  Rendered things/show.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 39ms (Views: 32.8ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (3.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 73]]
+  ↳ db/seeds.rb:1
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 74]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:1
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 75]]
+  ↳ db/seeds.rb:1
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:1
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:3
+  [1m[36mUser Create (2.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "location", "bio", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "tim"], ["email", "tim@test.com"], ["password_digest", "$2a$12$ud/92CXZxa4rS.YOds7qBeCvijcUGohq41cBSsuml2xmWpyQZiXh2"], ["created_at", "2020-01-13 05:27:05.689727"], ["updated_at", "2020-01-13 05:27:05.689727"], ["location", "wentworth falls"], ["bio", "placehold bio text for tim"], ["image", "profilephoto.jpg"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:4
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "location", "bio") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "luke"], ["email", "luke@test.com"], ["password_digest", "$2a$12$Dc9/FrZjqeJl4BbWPQrIU.1yMwhy6jAxXS4vsGwpCaU9BrKApoLXm"], ["created_at", "2020-01-13 05:27:05.895912"], ["updated_at", "2020-01-13 05:27:05.895912"], ["location", "chatswood"], ["bio", "placeholder bio text for luke"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at", "location", "bio", "image") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "josh"], ["email", "josh@test.com"], ["password_digest", "$2a$12$rmPn8wU71UwkDrmhKndLbeVjrJhLElXMXRLK/6YyWpL7PD5tHjIvS"], ["created_at", "2020-01-13 05:27:06.102425"], ["updated_at", "2020-01-13 05:27:06.102425"], ["location", "bondi"], ["bio", "place holder bio text for josh"], ["image", "profilephoto.jpg"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:5
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."name" FROM "users"[0m
+  ↳ db/seeds.rb:7
+  [1m[36mThing Load (1.0ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.3ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 105]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 106]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 109]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 107]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mThing Destroy (0.2ms)[0m  [1m[31mDELETE FROM "things" WHERE "things"."id" = $1[0m  [["id", 108]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "dinner"], ["quantity", 2], ["image", "item.jpg"], ["created_at", "2020-01-13 05:27:06.136831"], ["updated_at", "2020-01-13 05:27:06.136831"], ["act", 0], ["thing_type", 0], ["location", "bankstown"], ["urgency", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "down tree"], ["quantity", 1], ["image", "task.jpg"], ["created_at", "2020-01-13 05:27:06.139094"], ["updated_at", "2020-01-13 05:27:06.139094"], ["act", 0], ["thing_type", 1], ["location", "katoomba"], ["urgency", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "fix fencing"], ["quantity", 1], ["image", "item.jpg"], ["created_at", "2020-01-13 05:27:06.141067"], ["updated_at", "2020-01-13 05:27:06.141067"], ["act", 1], ["thing_type", 1], ["location", "braidwood"], ["description", "place holder text describing said task"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mThing Create (0.3ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "condition", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "clothes"], ["quantity", 1], ["image", "item.jpg"], ["created_at", "2020-01-13 05:27:06.142980"], ["updated_at", "2020-01-13 05:27:06.142980"], ["act", 1], ["thing_type", 0], ["location", "batemans bay"], ["condition", 1], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mThing Create (0.4ms)[0m  [1m[32mINSERT INTO "things" ("name", "quantity", "image", "created_at", "updated_at", "act", "thing_type", "location", "urgency", "description") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["name", "lift"], ["quantity", 1], ["image", "task.jpg"], ["created_at", "2020-01-13 05:27:06.144990"], ["updated_at", "2020-01-13 05:27:06.144990"], ["act", 0], ["thing_type", 1], ["location", "lithgow"], ["urgency", 0], ["description", "place holder text describing said item"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "things"."name" FROM "things"[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (1.2ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 05:27:06.158937"], ["user_id", 76], ["id", 110]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:23
+  [1m[36mThing Update (0.2ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 05:27:06.161875"], ["user_id", 76], ["id", 111]]
+  ↳ db/seeds.rb:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:24
+  [1m[36mThing Update (1.0ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 05:27:06.164529"], ["user_id", 77], ["id", 114]]
+  ↳ db/seeds.rb:24
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.5ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 05:27:06.168917"], ["user_id", 78], ["id", 112]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:25
+  [1m[36mThing Update (0.4ms)[0m  [1m[33mUPDATE "things" SET "updated_at" = $1, "user_id" = $2 WHERE "things"."id" = $3[0m  [["updated_at", "2020-01-13 05:27:06.171647"], ["user_id", 78], ["id", 113]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "things"."name" FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:29
+  [1m[36mMessage Create (1.2ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 1"], ["message", "how are you 1?"], ["to_id", 76], ["user_id", 77], ["created_at", "2020-01-13 05:27:06.190982"], ["updated_at", "2020-01-13 05:27:06.190982"]]
+  ↳ db/seeds.rb:29
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:29
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:30
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 2"], ["message", "how are you 2?"], ["to_id", 77], ["user_id", 76], ["created_at", "2020-01-13 05:27:06.196407"], ["updated_at", "2020-01-13 05:27:06.196407"]]
+  ↳ db/seeds.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:30
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mMessage Create (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("subject", "message", "to_id", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["subject", "hello 3"], ["message", "how are you 2?"], ["to_id", 78], ["user_id", 76], ["created_at", "2020-01-13 05:27:06.199866"], ["updated_at", "2020-01-13 05:27:06.199866"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+Started GET "/things/107" for ::1 at 2020-01-13 16:27:08 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"107"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 107], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=107):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things" for ::1 at 2020-01-13 16:27:10 +1100
+Processing by ThingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/index.html.erb within layouts/application
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ app/views/things/index.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  Rendered things/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 31ms (Views: 25.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/73" for ::1 at 2020-01-13 16:27:11 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"73"}
+Redirected to http://localhost:3000/login
+Filter chain halted as :check_if_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2020-01-13 16:27:11 +1100
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2020-01-13 16:27:15 +1100
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4PEZAz+Q4oBSP3+NO4LxDm2bFkECodqQv2qVQMxRCq8SURM9CDDOGYTE7gpJmVOsHH4EyZOj3ZP0d4bJiwgoew==", "email"=>"tim@test.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tim@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:7
+Redirected to http://localhost:3000/users/76
+Completed 302 Found in 213ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/76" for ::1 at 2020-01-13 16:27:16 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 26ms (Views: 21.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/things" for ::1 at 2020-01-13 16:27:18 +1100
+Processing by ThingsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/index.html.erb within layouts/application
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ app/views/things/index.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  Rendered things/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/things/112" for ::1 at 2020-01-13 16:27:19 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (3.1ms)
+  Rendered things/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 35ms (Views: 28.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/things/112" for ::1 at 2020-01-13 16:45:26 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"112"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 112], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+  Rendering things/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/show.html.erb:2
+  Rendered messages/_form.html.erb (2.3ms)
+  Rendered things/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 39ms (Views: 32.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/76" for ::1 at 2020-01-13 16:45:30 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 39ms (Views: 25.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/76" for ::1 at 2020-01-13 16:46:04 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.2ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 37ms (Views: 27.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 16:54:49 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 22.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 16:54:58 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 20.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 16:55:00 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 22.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/things/things/need" for ::1 at 2020-01-13 16:55:01 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/things/things/need"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/things/things/need" for ::1 at 2020-01-13 16:55:23 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/things/things/need"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/things/new" for ::1 at 2020-01-13 16:55:24 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 16:55:24 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/things/need" for ::1 at 2020-01-13 16:55:26 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/new" for ::1 at 2020-01-13 16:55:27 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 16:55:31 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 22.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/things/need.html" for ::1 at 2020-01-13 16:55:32 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 5ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/need.html" for ::1 at 2020-01-13 16:55:36 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.8ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 7ms (ActiveRecord: 1.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/new" for ::1 at 2020-01-13 16:55:37 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/things/need.html.erb" for ::1 at 2020-01-13 16:55:38 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/things/need.html.erb"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/things/new" for ::1 at 2020-01-13 16:56:01 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 30.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 16:57:06 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things/need" for ::1 at 2020-01-13 16:57:07 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/need" for ::1 at 2020-01-13 16:57:30 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 4ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/things/new" for ::1 at 2020-01-13 16:57:32 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/things/things/need" for ::1 at 2020-01-13 16:57:34 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/things/things/need"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/things/new" for ::1 at 2020-01-13 17:12:55 +1100
+  
+ArgumentError (Missing :controller key on routes definition, please check your routes.):
+  
+config/routes.rb:9:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/76" for ::1 at 2020-01-13 17:12:57 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/users/76"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/76" for ::1 at 2020-01-13 17:12:59 +1100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"76"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:5
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 0]]
+  ↳ app/views/users/show.html.erb:6
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "things" WHERE "things"."user_id" = $1 AND "things"."act" = $2[0m  [["user_id", 76], ["act", 1]]
+  ↳ app/views/users/show.html.erb:7
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:9
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT "things".* FROM "things" WHERE "things"."user_id" = $1[0m  [["user_id", 76]]
+  ↳ app/views/users/show.html.erb:14
+  Rendered users/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 90ms (Views: 51.9ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:13:02 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:13:47 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 68ms (Views: 21.7ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:13:49 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:14:04 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 36ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:14:06 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 73ms (Views: 35.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:14:07 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:14:08 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 20.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:14:12 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:14:13 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:14:14 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:14:15 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:16:06 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 22.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:16:07 +1100
+  
+ActionController::RoutingError (No route matches [GET] "/need/item"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.1) lib/rack/method_override.rb:24:in `call'
+rack (2.1.1) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.1) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/need" for ::1 at 2020-01-13 17:16:09 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:17:04 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:17:05 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @thing do |f| %>
+    2: 
+    3: <%# act = 0 ('need'), thing_type = 0 ('item') %>
+    4: 
+  
+app/views/things/needitem.html.erb:1:in `_app_views_things_needitem_html_erb__3382674713285856709_70265551646840'
+Started GET "/need" for ::1 at 2020-01-13 17:17:07 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:17:28 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:17:29 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @thing do |f| %>
+    2: 
+    3: <%# act = 0 ('need'), thing_type = 0 ('item') %>
+    4: 
+  
+app/views/things/needitem.html.erb:1:in `_app_views_things_needitem_html_erb__3382674713285856709_70265569306380'
+Started GET "/need" for ::1 at 2020-01-13 17:17:39 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:17:49 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for @thing do |f| %>
+    2: 
+    3: <%# act = 0 ('need'), thing_type = 0 ('item') %>
+    4: 
+  
+app/views/things/needitem.html.erb:1:in `_app_views_things_needitem_html_erb__3382674713285856709_70265540645880'
+Started GET "/need" for ::1 at 2020-01-13 17:19:07 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 44ms (Views: 27.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:19:08 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Completed 404 Not Found in 18ms (ActiveRecord: 9.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing without an ID):
+  
+app/controllers/things_controller.rb:26:in `needitem'
+Started GET "/need/item" for ::1 at 2020-01-13 17:19:26 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `decription' for #<Thing:0x007fcfe9f69c88>
+Did you mean?  description
+               description?
+               description=):
+     6: <%= f.text_field :name %>
+     7: <br>
+     8: <%= f.label :description %>
+     9: <%= f.text_area :decription %>
+    10: <br>
+    11: <%= f.label :urgency %>
+    12: <%= f.select :urgency, Thing.urgencies.keys %>
+  
+app/views/things/needitem.html.erb:9:in `block in _app_views_things_needitem_html_erb__3382674713285856709_70265531063640'
+app/views/things/needitem.html.erb:1:in `_app_views_things_needitem_html_erb__3382674713285856709_70265531063640'
+Started GET "/need" for ::1 at 2020-01-13 17:19:57 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:19:59 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 25.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:20:05 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:20:06 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 30ms (Views: 25.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:20:07 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:20:07 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:20:09 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:20:11 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 23.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/things" for ::1 at 2020-01-13 17:20:23 +1100
+Processing by ThingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VC/h4HsapiPH59idVztgz1YDEA5SiF9Oz4niEv9wH5Cmj+veTLqKuhEcSRolIMJtJ+YChsOKWE2ElPGbuCk9RA==", "thing"=>{"name"=>"canned food", "description"=>"whatever", "urgency"=>"low", "location"=>"blacktown"}, "commit"=>"Create Thing"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+Unpermitted parameters: :description, :urgency, :location
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/things_controller.rb:7
+  [1m[36mThing Create (0.8ms)[0m  [1m[32mINSERT INTO "things" ("name", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "canned food"], ["created_at", "2020-01-13 06:20:23.540930"], ["updated_at", "2020-01-13 06:20:23.540930"], ["user_id", 76]]
+  ↳ app/controllers/things_controller.rb:7
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/things_controller.rb:7
+Redirected to http://localhost:3000/things
+Completed 302 Found in 14ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/things" for ::1 at 2020-01-13 17:20:23 +1100
+Processing by ThingsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/index.html.erb within layouts/application
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT "things".* FROM "things"[0m
+  ↳ app/views/things/index.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/views/things/index.html.erb:7
+  Rendered things/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 31ms (Views: 23.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:22:44 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 43ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:22:45 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 18.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things/need" for ::1 at 2020-01-13 17:22:46 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.6ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:22:59 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/offer" for ::1 at 2020-01-13 17:23:03 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"offer"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.5ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 6ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=offer):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:23:19 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 19.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/offer" for ::1 at 2020-01-13 17:23:21 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"offer"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 16ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=offer):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:23:24 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/things/need" for ::1 at 2020-01-13 17:23:25 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 5ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:23:26 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:23:27 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:23:28 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:23:29 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 30ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:23:29 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/need/task" for ::1 at 2020-01-13 17:23:30 +1100
+Processing by ThingsController#needtask as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needtask.html.erb within layouts/application
+  Rendered things/needtask.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 30ms (Views: 25.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:23:31 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:23:31 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:23:33 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/need" for ::1 at 2020-01-13 17:23:34 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.7ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 4ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:23:36 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/things/offer" for ::1 at 2020-01-13 17:23:37 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"offer"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.4ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=offer):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:23:38 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 20ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/offer" for ::1 at 2020-01-13 17:23:57 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"offer"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 28ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=offer):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:23:58 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/need" for ::1 at 2020-01-13 17:23:59 +1100
+Processing by ThingsController#show as HTML
+  Parameters: {"id"=>"need"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  [1m[36mThing Load (0.3ms)[0m  [1m[34mSELECT  "things".* FROM "things" WHERE "things"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/things_controller.rb:16
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Thing with 'id'=need):
+  
+app/controllers/things_controller.rb:16:in `show'
+Started GET "/offer" for ::1 at 2020-01-13 17:24:03 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:24:44 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/offer/task" for ::1 at 2020-01-13 17:24:45 +1100
+Processing by ThingsController#offertask as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offertask.html.erb within layouts/application
+  Rendered things/offertask.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 46ms (Views: 25.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:24:47 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/offer/item" for ::1 at 2020-01-13 17:24:47 +1100
+Processing by ThingsController#offeritem as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offeritem.html.erb within layouts/application
+  Rendered things/offeritem.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/offer" for ::1 at 2020-01-13 17:24:48 +1100
+Processing by ThingsController#offer as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/offer.html.erb within layouts/application
+  Rendered things/offer.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/things/new" for ::1 at 2020-01-13 17:24:49 +1100
+Processing by ThingsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/new.html.erb within layouts/application
+  Rendered things/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:24:50 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/need/item" for ::1 at 2020-01-13 17:24:50 +1100
+Processing by ThingsController#needitem as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/needitem.html.erb within layouts/application
+  Rendered things/needitem.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/need" for ::1 at 2020-01-13 17:24:51 +1100
+Processing by ThingsController#need as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering things/need.html.erb within layouts/application
+  Rendered things/need.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 0.6ms)
+
+

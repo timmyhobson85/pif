@@ -1,0 +1,18 @@
+<%= form_for @thing do |f| %>
+
+<%# act = 0 ('need'), thing_type = 0 ('item') %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :description %>
+<%= f.text_area :description %>
+<br>
+<%= f.label :urgency %>
+<%= f.select :urgency, Thing.urgencies.keys %>
+<br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
+<%= f.submit %>
+<% end %>

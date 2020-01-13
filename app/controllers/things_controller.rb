@@ -22,6 +22,23 @@ class ThingsController < ApplicationController
     # check_ownership
   end
 
+  def needitem
+    @thing = Thing.new
+    # check_ownership
+  end
+  def needtask
+    @thing = Thing.new
+    # check_ownership
+  end
+  def offeritem
+    @thing = Thing.new
+    # check_ownership
+  end
+  def offertask
+    @thing = Thing.new
+    # check_ownership
+  end
+
   def update
     puts params
     @thing = Thing.find params[:id]

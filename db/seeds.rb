@@ -1,8 +1,8 @@
 User.destroy_all
 
-u1 = User.create! name: 'tim', email: 'tim@test.com', password: 'chicken'
-u2 = User.create! name: 'luke', email: 'luke@test.com', password: 'chicken'
-u3 = User.create! name: 'josh', email: 'josh@test.com', password: 'chicken'
+u1 = User.create! name: 'tim', email: 'tim@test.com', password: 'chicken', location: 'wentworth falls', image: 'profilephoto.jpg', bio: 'placehold bio text for tim'
+u2 = User.create! name: 'luke', email: 'luke@test.com', password: 'chicken', location: 'chatswood', bio: 'placeholder bio text for luke'
+u3 = User.create! name: 'josh', email: 'josh@test.com', password: 'chicken', location: 'bondi', image: 'profilephoto.jpg', bio: 'place holder bio text for josh'
 
 puts "-created #{ User.count } users: #{ User.pluck(:name).join(', ') }"
 
