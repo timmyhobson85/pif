@@ -4,28 +4,36 @@ class MessagesController < ApplicationController
   end
 
   def create
-    message = Message.create message_params
-    @current_user.messages << message
-    # @thing = Thing.find params[:thing_id]
-    @thing = Thing.find params[:message][:thing_id]
-
-    @thing.messages << message
     # raise 'hell'
-    redirect_to things_path
+    message = Message.create message_params
+    @current_user.sent_messages << message
+    #find recipient user
+    #@recieveuser.receieved_messages << message
+
+
+    # @thing = Thing.find params[:thing_id]
+
+    # raise 'hell'
+    redirect_back fallback_location: @root
   end
 
   def show
     @message = Message.find params[:id]
-    @thing = Thing.find (@message.thing_id)
-    @messages = Message.all
-    @thread = Message.where(thing_id: @thing.id).where(user_id: [ @message.user.id,  @current_user.id, @thing.user.id])
+
+    if @message.sender == @current_user
+      @other = @message.recipient
+    else
+      @other = @message.sender
+    end
+
+    # @thing = Thing.find (@message.thing_id)
+    @thread = Message.where(sender_id: [@message.sender_id, @message.recipient_id], recipient_id:[@message.sender_id, @message.recipient_id], thing_id: @message.thing.id )
     @reply = Message.new
     # raise 'hell'
   end
 
   def index
     @messages = Message.all
-    @things = Thing.all
     # raise 'hell'
   end
 
@@ -40,6 +48,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit( :message, :subject, :to_id, :thing_id)
+    params.require(:message).permit( :message, :subject, :thing_id, :recipient_id)
   end
 end

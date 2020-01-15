@@ -1,57 +1,19 @@
-<h2>my messages</h2>
-
-<h3>TESTING MESSAGES</h3>
-
-<h4>incoming messages</h4>
-<% @incoming_num = 0 %>
-<% @messages.each do |m| %>
-  <% if m.thing.user == @current_user %>
-    <h3><%= link_to "#{m.user.name} - #{m.thing.name}", message_path(m.id) %></h3>
-    <% @incoming_num += 1 %>
-  <% end %>
-<% end %>
-<% if @incoming_num == 0 %>
-  No Messages
+<h2>messages for <%= @current_user.name %></h2>
+<br><br>
+<h3>to:</h3>
+<br>
+<% @messages.where(sender_id: @current_user.id).each do |m| %>
+  <%= link_to "#{m.recipient.name} - #{m.thing.name}", message_path(m.id) %> <br>
 <% end %>
 <br>
-<h4>outgoing messages</h4>
-<% @outgoing_num = 0 %>
-<% @messages.each do |m| %>
-  <% if m.user == @current_user %>
-    <h3><%= link_to "#{m.user.name} - #{m.thing.name} - #{m.subject}", message_path(m.id) %></h3>
-    <% @outgoing_num += 1 %>
-  <% end %>
-<% end %>
-<% if @outgoing_num == 0 %>
-  No Messages
-<% end %>
-<br><br>
-<h3>END TEST</h3>
-<br><br>
+<br><br><br>
+<br>
 
-<!-- <h3>incoming:</h3>
-<% if @current_user.messages.present? %>
-  <% @current_user.messages.each do |m| %>
-  <ul>
-    <% if m.thing.user.id == @current_user.id %>
-      <li><%= link_to "#{m.thing.name} :#{m.user.name}", message_path( m.id ) %></li>
-    <% end %>
-  </ul>
-  <% end %>
-<% else %>
-<h3>no messages.</h3>
+<h3>from:</h3>
+<br>
+<% @messages.where(recipient_id: @current_user.id).each do |m| %>
+  <%= link_to "#{m.sender.name} - #{m.thing.name}", message_path(m.id) %> <br>
 <% end %>
-<br><br>
-<h3>outgoing:</h3>
-<% if @current_user.messages.present? %>
-  <% @current_user.messages.each do |m| %>
-  <ul>
-    <% if m.user.id == @current_user.id %>
-      <li><%= link_to "#{m.thing.name} :#{m.user.name}", message_path( m.id ) %></li>
-    <% end %>
-  </ul>
-  <% end %>
-<% else %>
-<h3>no messages.</h3>
-<% end %>
--->
+<br>
+
+<%# change this to "CONVERSATIONS WITH?" %>

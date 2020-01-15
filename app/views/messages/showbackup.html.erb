@@ -1,0 +1,7 @@
+<h2>From: <%= @message.sender.name %></h2><br>
+<h3>regarding <%= @messsage.thing.act %>-<%= @message.thing.thing_type %>-<%= @message.thing.name %></h3>
+<br><br><br>
+<% @messages.each do |m| -%>
+<p><%= m.sender.name || m.receipient.name %> - <%= m.created_at %> </p><br>
+<p><%= m.message %></p>
+<% end %>

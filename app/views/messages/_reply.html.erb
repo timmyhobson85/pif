@@ -1,0 +1,14 @@
+<h5>reply:</h5>
+
+<%= form_for @reply do |f| %>
+<%= f.hidden_field :recipient_id, value: @other.id %>
+<%= f.hidden_field :thing_id, value: @message.thing.id %>
+
+
+<%= f.label :message %>
+<%= f.text_area :message %>
+<br>
+<%= f.submit %>
+
+
+<% end %>

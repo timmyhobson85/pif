@@ -77,14 +77,14 @@ description: 'place holder text describing said item',
 image: 'task.jpg'
 })
 mattress = Thing.create! ({
-  name: 'mattress',
-  act: 0,
-  thing_type: 0,
-  urgency: 1,
-  location: 'bankstown',
-  description: 'place holder text describing said item',
-  image: 'item.jpg'
-  })
+name: 'mattress',
+act: 0,
+thing_type: 0,
+urgency: 1,
+location: 'bankstown',
+description: 'place holder text describing said item',
+image: 'item.jpg'
+})
 
 puts "-created #{ Thing.count } users: #{ Thing.all.pluck(:name).join(', ') }"
 
@@ -97,23 +97,58 @@ puts " #{ User.first.name } has following things: #{ User.first.things.pluck(:na
 Message.destroy_all
 
 m1 = Message.create! ({
-subject: 'hello 1',
-message: 'how are you 1?',
-sender: tim,
-recipient: luke,
+# subject: 'hello 1',
+message: "hi tim, luke here, i'd like that dinner",
+sender: luke,
+recipient: tim,
 thing: dinner
 })
 m2 = Message.create! ({
-subject: 'hello 2',
-message: 'how are you 2?',
+# subject: 'hello 2',
+message: "hi luke, tim here i'd like to give you a mattress",
+sender: tim,
+recipient: luke,
+thing: mattress
+})
+m3 = Message.create! ({
+# subject: 'hello 3',
+message: "hi josh, tim here, i'd like to take those clothes",
+sender: josh,
+recipient: tim,
+thing: clothes
+})
+m4 = Message.create! ({
+# subject: 'hello 3',
+message: "hi josh, luke here, i'd like to take those clothes",
+sender: josh,
+recipient: luke,
+thing: clothes
+})
+m5 = Message.create! ({
+# subject: 'hello 1',
+message: "hi tim, josh here, i'd like that dinner",
+sender: josh,
+recipient: tim,
+thing: dinner
+})
+m = Message.create! ({
+# subject: 'hello 1',
+message: "hi luke what do you need",
 sender: tim,
 recipient: luke,
 thing: dinner
 })
-m3 = Message.create! ({
-subject: 'hello 3',
-message: 'how are you 2?',
-sender: tim,
-recipient: luke,
+m = Message.create! ({
+# subject: 'hello 1',
+message: "someone has picked it up sorry",
+sender: josh,
+recipient: tim,
+thing: dinner
+})
+m = Message.create! ({
+# subject: 'hello 1',
+message: "i need pizza",
+sender: luke,
+recipient: tim,
 thing: dinner
 })

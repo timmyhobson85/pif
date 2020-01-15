@@ -1,0 +1,60 @@
+<h2><%= "#{@thing.act} - #{@thing.name}" %></h2>
+<h3>added by <%= @thing.user.name %></h3>
+
+<p>
+  Location - <%= @thing.location %>
+</p>
+<br>
+<p>
+  <%= @thing.description %>
+</p>
+<br>
+
+<% if @thing.image.present? %>
+  <%= image_tag @thing.image %>
+   <br>
+<% end %>
+<br>
+
+
+<!-- <% if @thing.user_id == @current_user.id %>
+  <h4>TEST SINGLE MESSAGE</h4>
+  <br>
+  <% if @thing.messages.present? %>
+    <% u = nil %>
+    <% @thing.messages.each do |m| %>
+      <% if u != m.user.id %>
+        <h3>from <%= m.user.name %></h3>
+        <p>subject: <%= m.subject %></p>
+        <p>message: <%= m.message %></p>
+        <p><%= link_to 'reply', 'placeholder' %></p>
+        <br>
+        <% end %>
+      <% u = m.user.id %>
+    <% end %>
+  <% end %>
+
+  <h4>TEST SINGLE MESSAGE</h4>
+  -->
+
+  <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>
+  <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
+<!-- <br><br><br>
+  <br><br>
+  <h4>Messages:</h4>
+  <% @thing.messages.each do |m| %>
+  <h3>from <%= m.user.name %></h3>
+  subject: <%= m.subject %>
+  <br>
+  message: <%= m.message %>
+  <br>
+  <%= link_to 'reply', 'placehold' %>
+  <br><br>
+  <% end %>
+  <% else %>
+  <h4>Message <%= @thing.user.name %></h4>
+  <%= render partial: 'messages/form' %>
+
+<% end %>
+<%# only show the first message for the user on this thing. %>
+-->
