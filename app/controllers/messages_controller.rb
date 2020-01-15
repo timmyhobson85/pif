@@ -6,27 +6,27 @@ class MessagesController < ApplicationController
   def create
     message = Message.create message_params
     @current_user.messages << message
+    # @thing = Thing.find params[:thing_id]
     @thing = Thing.find params[:message][:thing_id]
+
     @thing.messages << message
     # raise 'hell'
-    redirect_to messages_path
+    redirect_to things_path
   end
-
-  # def createreply
-  #   @message = Message.find params[:id]
-  #   @reply = Message.create reply_params
-  #   @current_user.messages << reply
-  #   @thing = Thing.find params[:thing_id]
-  #   @thing.messages << reply
-  # end
 
   def show
     @message = Message.find params[:id]
+    @thing = Thing.find (@message.thing_id)
+    @messages = Message.all
+    @thread = Message.where(thing_id: @thing.id).where(user_id: [ @message.user.id,  @current_user.id, @thing.user.id])
     @reply = Message.new
+    # raise 'hell'
   end
 
   def index
     @messages = Message.all
+    @things = Thing.all
+    # raise 'hell'
   end
 
   def edit

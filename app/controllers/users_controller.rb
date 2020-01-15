@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def show
     check_if_logged_in
     @user = User.find params[:id]
+    # binding.pry
   end
 
   def edit

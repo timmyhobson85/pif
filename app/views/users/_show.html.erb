@@ -6,12 +6,14 @@
   <%= @user.things.where(act:'need').count %> - Needs <br>
   <%= @user.things.where(act:'offer').count %> - Offers <br>
   <br>
-  You have <%= @current_user.messages.count %> messages.
+  <%# i dont think this is the best way to show total messages - do in loop? %>
+  <%# You have <%= @current_user.things.messages.count %><%# messages. %>
 </p>
 <h3>your listings</h3>
 <p>
   <ul>
     <% @user.things.each do |t| %>
+    <% totalmessages = nil %>
       <% if t.user_id == @current_user.id %>
       <li>
         <%= link_to "#{t.act} - #{t.name}: #{t.messages.count}msgs", thing_path(t.id) %>

@@ -1,16 +1,29 @@
-<h2><%= @message.subject %> from <%= @message.user.name %></h2>
 
-<p><%= @message.message %></p>
+<h2>message between <br> <%= @thing.user.name %> & <%= @thing.messages.first.user.name %> regarding the <%= @thing.act %>: <%= @thing.name %></h2>
+<br>
+<% @thing.messages.each do |m| %>
+<!-- later replace the name with a profile picture? diff styling for which user -->
+  <h3><%= @thing.messages.first.user.name  %> - <%= m.message %></h3><h6> - <%= m.created_at%></h6>
+  <br>
+<% end %>
+<br>
+
+<br><br>
+<h1>conversation</h1>
+<h3><%= @message.user.name %> - <%= @thing.user.name %> - <%= @thing.act %> - <%= @thing.thing_type %> - <%= @thing.name %></h3>
+<% @thread.each do |m| %>
+  <%= m.message %> - <%= m.user.name %> id: <%= m.user.id %>- <%= m.created_at -%>
+  <br>
+<% end %>
 
 <%= form_for @reply do |f| %>
+<%= f.hidden_field :thing_id, :value => "#{@thing.id}" %>
+<%= f.label "#{@thing.id}" %>
 
-<h3>reply to <%= @message.user.name %></h3>
-
-<%# f.label :to_id %>
-<%# f.select :to_id, ["#{@message.user_id}"], :prompt => "#{@message.user.name}" %>
-<%# hidden form that includes user_id and to_id %>
 <%= f.label :message %>
 <%= f.text_area :message %>
-<br>
 <%= f.submit %>
+
 <% end %>
+
+<br><br><br><br>
