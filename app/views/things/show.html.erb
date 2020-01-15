@@ -16,17 +16,32 @@
 <% end %>
 <br>
 
+<br><br><br>
 <% if @thing.user_id == @current_user.id %>
-  <h3>this is your listing</h3>
-  <br>
+  <% if @thing.messages.present? %>
+    <h3>Messages:</h3>
+    <% u = nil %>
+    <% @thing_messages.each do |m| %>
+      <% if u != m.sender.id %>
+        <h3>from <%= m.sender.name %></h3>
+        <p>message: <%= m.message %></p>
+        <p><%= link_to 'reply', 'placeholder' %></p>
+        <br>
+      <% end %> <!-- end the if u = m.sender.id -->
+      <% u = m.sender.id %>
+    <% end %> <!-- end @thing.message.each -->
+    <% else %>
+    <h3>No Messages.</h3>
+  <% end %> <!-- end if present? -->
+  
+
   <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>
   <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
-  <h4>Messages:</h4>
-  <%# @thing.messages.each do |m| %>
-    show messages
-  <%# end %>
-<% else %>
-  <br>
-  <h4>Message <%= @thing.user.name %></h4>
-  <%= render partial: 'messages/form' %>
+  <br><br>
+  <% else %>
+  <h4>Message form placehold<%= @thing.user.name %></h4>
+  <%# render partial: 'messages/form' %>
+
 <% end %>
+<br><br><br>
+<h3>end test</h3>

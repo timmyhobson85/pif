@@ -34,6 +34,7 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
+    @things = Thing.all
     # raise 'hell'
   end
 

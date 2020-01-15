@@ -7,4 +7,8 @@ class Thing < ApplicationRecord
   enum condition: [:newitem, :useditem]
   enum urgency: [:low, :medium, :high, :dire]
 
+  # tell geocoder where to look to get the human-readable address string
+  geocoded_by :address
+  #tell geocoder to actually turn the above address into a latitude and longitude(by doing a lookup in a remote API) any time you create or update a Thing new item
+  after_validation :geocode
 end

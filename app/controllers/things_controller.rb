@@ -15,6 +15,8 @@ class ThingsController < ApplicationController
   def show
     @thing = Thing.find params[:id]
     @message = Message.new
+    @thing_messages = Message.where(thing_id: @thing.id).order(:sender_id)
+    @things = Thing.all
     # binding.pry
   end
 
@@ -51,6 +53,10 @@ class ThingsController < ApplicationController
   def destroy
     Thing.destroy params[:id]
     redirect_to things_path
+  end
+
+  def map
+    @things = Thing.select(:name, :latitude, :longitude)
   end
 
   private

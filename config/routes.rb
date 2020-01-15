@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'map' => 'things#map'
+
   root to: 'users#account'
   # sessions (login form/form submit/logout) routes:
   get '/login'    => 'session#new'
