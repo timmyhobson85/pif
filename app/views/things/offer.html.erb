@@ -1,6 +1,11 @@
 <h2>an offer.</h2>
+<div class="containNewThing">
 
+<%= link_to '/offer/item' do %>
+<div class="newThing" id="offerItem">an item?</div>
+<% end %>
 
-<h3><%= link_to 'an item?', '/offer/item' %></h3>
-
-<h3><%= link_to 'a task?', '/offer/task' %></h3>
+<%= link_to '/offer/task' do %>
+<div class="newThing" id="offerItem">a task?</div>
+<% end %>
+</div>

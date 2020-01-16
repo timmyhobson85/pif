@@ -2,25 +2,26 @@
 
 <%= f.label :name %>
 <%= f.text_field :name %>
-<br>
+
 
 <%= f.label :act %>
 <%= f.select :act, Thing.acts.keys %>
-<br>
+
 <%= f.label :condition %>
 <%= f.select :condition, Thing.conditions.keys %>
-<br>
-<%= f.label :urgency %>
-<%= f.select :urgency, Thing.urgencies.keys %>
-<br>
+
+<%# f.label :urgency %>
+<%# f.select :urgency, Thing.urgencies.keys %>
+<!-- <br> -->
 <%= f.label :description %>
 <%= f.text_area :description %>
-<br>
+
 <%= f.label :location %>
 <%= f.text_field :location %>
-<br>
+
 <%= f.label :image %>
 <%= f.cl_image_upload :image %>
+
 <br>
 <%= f.submit %>
 

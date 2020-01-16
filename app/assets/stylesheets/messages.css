@@ -1,0 +1,7 @@
+#chatbox {
+  height:50vh;
+  width:50vh;
+  overflow:scroll;
+  background-color: #eeeeee;
+  padding: 20px;
+}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pif</title>
+    <title>payitforward---></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,35 +9,33 @@
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
   </head>
+
+
+  <body>
   <div id="container">
-    <body>
-    <header>
-      <h1>pif - pay it forward</h1>
-      <nav>
-        <% if @current_user.present? %>
-          Welcome, <%= @current_user.name %>-userid: (<%= @current_user.id %>)
-          |<%= link_to 'create listing', new_thing_path %>|
-          |<%= link_to 'browse listings', things_path %>|
-          |<%= link_to 'my listings', user_path( @current_user.id ) %>|
-          |<%= link_to 'enquiries', messages_path %>|
-          |<%= link_to 'logout', login_path, method: 'delete' %>|
-        <% else %>
-          |<%= link_to 'login', login_path %>|
-          |<%= link_to 'signup', new_user_path %>|
-        <% end %>
-      </nav>
-    </header>
-
-
+    <div id="header">
+      <header>
+        <h1>payitforward</h1>
+        <nav>
+          <% if @current_user.present? %>
+            Welcome, <%= @current_user.name %>-userid: (<%= @current_user.id %>)
+            |<%= link_to 'create listing', new_thing_path %>|
+            |<%= link_to 'browse listings', things_path %>|
+            |<%= link_to 'my listings', user_path( @current_user.id ) %>|
+            |<%= link_to 'enquiries', messages_path %>|
+            |<%= link_to 'logout', login_path, method: 'delete' %>|
+          <% else %>
+            |<%= link_to 'login', login_path %>|
+            |<%= link_to 'signup', new_user_path %>|
+          <% end %>
+        </nav>
+      </header>
+    </div>
+    <div id="wrapper">
     <div id="yield">
     <%= yield %>
     </div>
-
-    <footer>
-      <p>
-        &copy; timmy hobson 2020
-      </p>
-    </footer>
-  </body>
-</div>
+    </div>
+  </div>
+</body>
 </html>

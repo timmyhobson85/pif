@@ -1,6 +1,7 @@
 <h2>conversation regarding <%= @message.thing.name %></h2>
 <br><br><br>
 
+<div id="chatbox">
 <% @thread.each do |m| %>
   <h5><%= m.sender.name %>:</h5>
   <!-- if current user = sender diferent colour?? -->
@@ -9,5 +10,6 @@
   </div>
   <br>
 <% end %>
+</div>
 
 <%= render partial: 'reply' %>

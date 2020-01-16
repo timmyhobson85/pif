@@ -10,24 +10,25 @@
   <% end %>
 </ul>
 <% end %>
+
 <%= f.label :name %>
 <%= f.text_field :name %>
-<br>
+
 <%= f.label :email %>
 <%= f.email_field :email %>
-<br>
+
 <%= f.label :password %>
 <%= f.password_field :password %>
-<br>
+
 <%= f.label :password_confirmation, :value => "confirm password" %>
 <%= f.password_field :password_confirmation %>
-<br>
+
 <%= f.label :location %>
 <%= f.text_field :location %>
-<br>
+
 <%= f.label :bio %>
 <%= f.text_area :bio %>
-<br>
+
 <%= f.label :image %>
 <%= f.cl_image_upload :image %>
 

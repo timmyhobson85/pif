@@ -142,8 +142,8 @@ thing: dinner
 m7 = Message.create! ({
 # subject: 'hello 1',
 message: "someone has picked it up sorry",
-sender: josh,
-recipient: tim,
+sender: tim,
+recipient: josh,
 thing: dinner
 })
 m8 = Message.create! ({

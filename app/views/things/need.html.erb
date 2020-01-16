@@ -1,6 +1,9 @@
 <h2>in need.</h2>
-
-
-<h3><%= link_to 'an item?', '/need/item' %></h3>
-
-<h3><%= link_to 'a task?', '/need/task' %></h3>
+<div class="containNewThing">
+<%= link_to '/need/item' do %>
+<div class="newThing" id="needItem">an item?</div>
+<% end %>
+<%= link_to '/need/task' do %>
+<div class="newThing" id="needTask">a task?</div>
+<% end %>
+</div>

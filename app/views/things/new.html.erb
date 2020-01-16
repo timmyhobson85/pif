@@ -1,9 +1,9 @@
 <h2>create listing</h2>
-
-
-<h3><%= link_to 'are you in need?', '/need' %></h3>
-
-<h3><%= link_to 'make an offer.', '/offer' %></h3>
-
-<!-- <h6>check old form</h6> -->
-<%# render partial: 'form' %>
+<div class="containNewThing">
+<%= link_to '/need' do %>
+<div class="newThing" id="newNeed">in need?</div>
+<% end %>
+<%= link_to '/offer' do %>
+<div class="newThing" id="newOffer">an offer.</div>
+<% end %>
+</div>

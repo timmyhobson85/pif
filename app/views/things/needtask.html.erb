@@ -1,3 +1,4 @@
+<h2>need a task</h2>
 <%= form_for @thing, :html => {:multipart => true} do |f| %>
 
 <%# act = 0 ('need'), thing_type = 1 ('task') %>
@@ -7,16 +8,16 @@
 
 <%= f.label :name %>
 <%= f.text_field :name %>
-<br>
+
 <%= f.label :description %>
 <%= f.text_area :description %>
-<br>
-<%= f.label :urgency %>
-<%= f.select :urgency, Thing.urgencies.keys %>
-<br>
+
+<%# f.label :urgency %>
+<%# f.select :urgency, Thing.urgencies.keys %>
+<!-- <br> -->
 <%= f.label :location %>
 <%= f.text_field :location, value: "#{@current_user.location}" %>
-<br>
+
 <%= f.label :image %>
 <%= f.cl_image_upload :image %>
 <br>

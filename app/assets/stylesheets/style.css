@@ -1,18 +1,28 @@
-html, body {
-  font-family: monospace;
-  background-color: #222222;
-  color: #dddddd;
-  border: 0;
+div {
+/* border: 1px solid grey; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
   margin: 0;
 }
 
-* {
-  border: 0;
-  margin: 0;
+
+#yield {
+  text-align: center;
+}
+
+#footer {
+}
+
+html, body {
+  font-family: monospace;
+  background-color: #dddddd;
+  color: #222222;
 }
 
 a {
-  color: pink;
+  color: #222222;
   text-decoration: none;
 }
 
@@ -22,16 +32,21 @@ img {
 
 li {
   list-style: none;
+  list-style-position: outside;
+}
+
+ul {
+  padding: 0;
 }
 
 img {
   border-radius: 10px;
-  /* box-shadow: 0 0 0 2px pink; */
+  box-shadow: 0 0 0 2px pink;
 }
 
 #conversationMessage {
-  /* border: 1px solid pink; */
-  background-color: pink;
+  border: 1px solid #D4D6E2;
+  background-color: #D4D6E2;
   color: black;
   border-radius: 10px;
   width: fit-content;

@@ -1,33 +1,54 @@
-#container {
-  border: 0;
+/* positioning/flexstuff */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction:column;
+  padding: 0;
 }
 
 body {
-  border: 0;
-  margin: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-header {
-  position: fixed;
+#container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#header {
+  display:flex;
+  position: absolute;
+  height: 10vh;
+  width: 100%;
   top: 0;
+  background-color:#87A387;
+}
+
+#wrapper {
+  position:absolute;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+  top: 10vh;
+  overflow:scroll;
 }
 
 #yield {
-  text-align: end;
-}
-
-footer {
-  bottom: 0;
-  position: absolute;
-}
-
-input, textarea {
-  border: 1px solid pink;
+  height:85vh;
+  width:95vw;
+  position:absolute;
+  overflow:scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }

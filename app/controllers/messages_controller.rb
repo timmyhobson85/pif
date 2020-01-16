@@ -27,7 +27,7 @@ class MessagesController < ApplicationController
     end
 
     # @thing = Thing.find (@message.thing_id)
-    @thread = Message.where(sender_id: [@message.sender_id, @message.recipient_id], recipient_id:[@message.sender_id, @message.recipient_id], thing_id: @message.thing.id )
+    @thread = Message.where(sender_id: [@message.sender_id, @message.recipient_id], recipient_id:[@message.sender_id, @message.recipient_id], thing_id: @message.thing.id ).order(id: :desc)
     @reply = Message.new
     # raise 'hell'
   end
