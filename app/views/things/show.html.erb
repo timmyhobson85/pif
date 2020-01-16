@@ -11,7 +11,7 @@
 <br>
 
 <% if @thing.image.present? %>
-  <%= image_tag @thing.image %>
+  <%= cl_image_tag (@thing.image) %>
    <br>
 <% end %>
 <br>

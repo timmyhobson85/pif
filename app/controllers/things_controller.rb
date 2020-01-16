@@ -5,6 +5,11 @@ class ThingsController < ApplicationController
 
   def create
     thing = @current_user.things.create thing_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      thing.image = req["public_id"]
+    end
+    thing.save
     redirect_to thing_path thing.id
   end
 
@@ -18,8 +23,6 @@ class ThingsController < ApplicationController
     @thing_messages = Message.where(thing_id: @thing.id).order(:sender_id)
     @thing_messages_incoming = Message.where.not(sender: @current_user).where(thing_id: @thing.id).order(:sender_id)
     @things = Thing.all
-    # binding.pry
-    # raise 'hell'
   end
 
   def edit
@@ -45,10 +48,14 @@ class ThingsController < ApplicationController
   end
 
   def update
-    puts params
     @thing = Thing.find params[:id]
     # redirect_to login_path and return unless @thing.user == @current_user
     @thing.update thing_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @thing.image = req["public_id"]
+    end
+    @thing.save
     redirect_to thing_path @thing.id
   end
 

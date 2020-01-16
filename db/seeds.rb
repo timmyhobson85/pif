@@ -4,23 +4,24 @@ tim = User.create! ({
 name: 'tim',
 email: 'tim@test.com',
 password: 'chicken',
-location: 'wentworth falls',
-image: 'profilephoto.jpg',
+location: 'Station St, Wentworth Falls, NSW, Australia',
+image: 'kmgkzc7zon1sf40zui6w',
 bio: 'placehold bio text for tim'
 })
 luke = User.create! ({
 name: 'luke',
 email: 'luke@test.com',
 password: 'chicken',
-location: 'chatswood',
+location: 'Auburn, NSW, Australia',
+image: 'kmgkzc7zon1sf40zui6w',
 bio: 'placeholder bio text for luke'
 })
 josh = User.create! ({
 name: 'josh',
 email: 'josh@test.com',
 password: 'chicken',
-location: 'bondi',
-image: 'profilephoto.jpg',
+location: 'Bondi, NSW, Australia',
+image: 'kmgkzc7zon1sf40zui6w',
 bio: 'place holder bio text for josh'
 })
 
@@ -37,7 +38,7 @@ name: 'dinner',
 act: 0,
 thing_type: 0,
 urgency: 3,
-location: 'bankstown',
+location: 'Bankstown NSW',
 description: 'place holder text describing said item',
 image: 'item.jpg'
 })
@@ -46,7 +47,7 @@ name: 'down tree',
 act: 0,
 thing_type: 1,
 urgency: 1,
-location: 'katoomba',
+location: 'Katoomba NSW',
 description: 'place holder text describing said item',
 image: 'task.jpg'
 })
@@ -54,7 +55,7 @@ fix_fencing = Thing.create! ({
 name: 'fix fencing',
 act: 1,
 thing_type: 1,
-location: 'braidwood',
+location: 'Braidwood NSW',
 description: 'place holder text describing said task',
 image: 'item.jpg'
 })
@@ -63,7 +64,7 @@ name: 'clothes',
 act: 1,
 thing_type: 0,
 condition: 1,
-location: 'batemans bay',
+location: 'Batemans Bay NSW',
 description: 'place holder text describing said item',
 image: 'item.jpg'
 })
@@ -72,7 +73,7 @@ name: 'lift',
 act: 0,
 thing_type: 1,
 urgency: 0,
-location: 'lithgow',
+location: 'Lithgow NSW',
 description: 'place holder text describing said item',
 image: 'task.jpg'
 })
@@ -81,12 +82,12 @@ name: 'mattress',
 act: 0,
 thing_type: 0,
 urgency: 1,
-location: 'bankstown',
+location: 'Bankstown NSW',
 description: 'place holder text describing said item',
 image: 'item.jpg'
 })
 
-puts "-created #{ Thing.count } users: #{ Thing.all.pluck(:name).join(', ') }"
+puts "-created #{ Thing.count } items: #{ Thing.all.pluck(:name).join(', ') }"
 
 tim.things << dinner << down_tree
 luke.things << lift << mattress
@@ -131,21 +132,21 @@ sender: josh,
 recipient: tim,
 thing: dinner
 })
-m = Message.create! ({
+m6 = Message.create! ({
 # subject: 'hello 1',
 message: "hi luke what do you need",
 sender: tim,
 recipient: luke,
 thing: dinner
 })
-m = Message.create! ({
+m7 = Message.create! ({
 # subject: 'hello 1',
 message: "someone has picked it up sorry",
 sender: josh,
 recipient: tim,
 thing: dinner
 })
-m = Message.create! ({
+m8 = Message.create! ({
 # subject: 'hello 1',
 message: "i need pizza",
 sender: luke,
