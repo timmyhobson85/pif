@@ -40,7 +40,7 @@ thing_type: 0,
 urgency: 3,
 location: 'Bankstown NSW',
 description: 'place holder text describing said item',
-image: 'item.jpg'
+image: 'hjryip1kpa9wexixzj6q'
 })
 down_tree = Thing.create! ({
 name: 'down tree',
@@ -49,15 +49,15 @@ thing_type: 1,
 urgency: 1,
 location: 'Katoomba NSW',
 description: 'place holder text describing said item',
-image: 'task.jpg'
+image: 'kmgkzc7zon1sf40zui6w'
 })
 fix_fencing = Thing.create! ({
 name: 'fix fencing',
 act: 1,
 thing_type: 1,
-location: 'Braidwood NSW',
+location: 'Braidwood NSW Australia',
 description: 'place holder text describing said task',
-image: 'item.jpg'
+image: 'hjryip1kpa9wexixzj6q'
 })
 clothes = Thing.create!({
 name: 'clothes',
@@ -66,7 +66,7 @@ thing_type: 0,
 condition: 1,
 location: 'Batemans Bay NSW',
 description: 'place holder text describing said item',
-image: 'item.jpg'
+image: 'hjryip1kpa9wexixzj6q'
 })
 lift = Thing.create! ({
 name: 'lift',
@@ -75,7 +75,7 @@ thing_type: 1,
 urgency: 0,
 location: 'Lithgow NSW',
 description: 'place holder text describing said item',
-image: 'task.jpg'
+image: 'kmgkzc7zon1sf40zui6w'
 })
 mattress = Thing.create! ({
 name: 'mattress',
@@ -84,7 +84,7 @@ thing_type: 0,
 urgency: 1,
 location: 'Bankstown NSW',
 description: 'place holder text describing said item',
-image: 'item.jpg'
+image: 'hjryip1kpa9wexixzj6q'
 })
 
 puts "-created #{ Thing.count } items: #{ Thing.all.pluck(:name).join(', ') }"

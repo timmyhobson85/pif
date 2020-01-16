@@ -39,6 +39,7 @@
   <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
   <br><br>
   <% else %>
+  <%= render partial: 'single_map' %>
   <h4>Message to: <%= @thing.user.name %></h4>
   <h2>message <%= @thing.user.name %></h2>
   <br>

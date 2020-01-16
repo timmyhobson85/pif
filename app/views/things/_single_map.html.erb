@@ -1,0 +1,29 @@
+<style>
+  #map {
+    height: 50vh;
+    width: 50vw;
+  }
+</style>
+<div id="map">
+<script>
+
+  const thing = <%= @thing.to_json.html_safe %>;
+  function initMap() {
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 13,
+      center: { lat: thing.latitude, lng: thing.longitude }
+    });
+
+    var marker = new google.maps.Marker({
+      position: { lat: thing.latitude, lng: thing.longitude },
+      map: map,
+      title: thing.name
+    })
+  }
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpm-zfcLSARGSw5GVWvUbPpgxSU-so6ts&callback=initMap">
+</script>
+</div>
