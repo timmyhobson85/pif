@@ -5,7 +5,7 @@ class ThingsController < ApplicationController
 
   def create
     thing = @current_user.things.create thing_params
-    redirect_to things_path
+    redirect_to thing_path thing.id
   end
 
   def index

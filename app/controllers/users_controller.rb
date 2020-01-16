@@ -11,7 +11,12 @@ class UsersController < ApplicationController
 
   def create
     # raise 'hell'
-    @user = User.create user_params
+    @user = User.new user_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      @user.image = req["public_id"]
+    end
+    @user.save
     if @user.persisted?
       session[:user_id] = @user.id #autologin
       redirect_to user_path( @user.id )

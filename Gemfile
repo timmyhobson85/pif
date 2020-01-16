@@ -42,6 +42,7 @@ group :development do
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'jquery-rails'
+  gem 'cloudinary'
 end
 
 
