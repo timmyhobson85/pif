@@ -9,11 +9,10 @@
     <%= m.message %>
     </div>
     <% else %>
-    luke:
+    <%= @other.name %>
     <div id="conversationMessageRecieve">
     <div id="senderImage"><%= cl_image_tag m.sender.image %></div>
     <div id="senderMessage"><%= m.message %></div>
-    <% @other_user = m.sender.name %>
     </div>
     <% end %>
 
