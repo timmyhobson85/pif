@@ -9,7 +9,7 @@ class ThingsController < ApplicationController
       req = Cloudinary::Uploader.upload(params[:file])
       thing.image = req["public_id"]
     end
-    # thing.save
+    thing.save
     redirect_to thing_path thing.id
   end
 
