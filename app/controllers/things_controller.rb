@@ -16,8 +16,10 @@ class ThingsController < ApplicationController
     @thing = Thing.find params[:id]
     @message = Message.new
     @thing_messages = Message.where(thing_id: @thing.id).order(:sender_id)
+    @thing_messages_incoming = Message.where.not(sender: @current_user).where(thing_id: @thing.id).order(:sender_id)
     @things = Thing.all
     # binding.pry
+    # raise 'hell'
   end
 
   def edit

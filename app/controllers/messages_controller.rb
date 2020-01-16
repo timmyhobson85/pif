@@ -35,7 +35,13 @@ class MessagesController < ApplicationController
   def index
     @messages = Message.all
     @things = Thing.all
-    # raise 'hell'
+    # @thing_messages_incoming = Message.where.not(sender: @current_user, @thing.user: @current_user).order(:sender_id)
+    # @thing_messages = Message.where(recipient_id: @current_user.id).order(:sender_id)
+    # # @current_user_messages = Message.where(sender_id:@current_user.id || recipient_id:@current_user )
+    # @msgs = Message.where( sender_id: @current_user.id ).or( Message.where( recipient_id: @current_user.id )  ).group_by( &:thing )
+    # # raise 'hell'
+    # @thing_messages_outgoing = Message.where.not(recip: @current_user).where(thing_id: @thing.id).order(:sender_id)
+
   end
 
   def edit

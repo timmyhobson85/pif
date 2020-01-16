@@ -1,1 +1,14 @@
-<h2>message form partial</h2>
+<h2>message <%= @thing.user.name %></h2>
+<br>
+<%= form_for @message do |f| %>
+<%= f.hidden_field :recipient_id, value: @thing.user.id %>
+<%= f.hidden_field :thing_id, value: @thing.id %>
+
+
+<%= f.label :message %>
+<%= f.text_area :message %>
+<br>
+<%= f.submit %>
+<br><br>
+
+<% end %>

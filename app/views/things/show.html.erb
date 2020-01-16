@@ -19,13 +19,13 @@
 <br><br><br>
 <% if @thing.user_id == @current_user.id %>
   <% if @thing.messages.present? %>
-    <h3>Messages:</h3>
+    <h3>enquiries:</h3>
     <% u = nil %>
-    <% @thing_messages.each do |m| %>
+    <% @thing_messages_incoming.each do |m| %>
       <% if u != m.sender.id %>
         <h3>from <%= m.sender.name %></h3>
-        <p>message: <%= m.message %></p>
-        <p><%= link_to 'reply', 'placeholder' %></p>
+        <p>message: <%= m.message %> - <%= m.id %> - <%= m.thing.name %></p>
+        <p><%= link_to 'reply', message_path(m.id) %></p>
         <br>
       <% end %> <!-- end the if u = m.sender.id -->
       <% u = m.sender.id %>
@@ -33,14 +33,28 @@
     <% else %>
     <h3>No Messages.</h3>
   <% end %> <!-- end if present? -->
-  
+
 
   <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>
   <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
   <br><br>
   <% else %>
-  <h4>Message form placehold<%= @thing.user.name %></h4>
-  <%# render partial: 'messages/form' %>
+  <h4>Message to: <%= @thing.user.name %></h4>
+  <h2>message <%= @thing.user.name %></h2>
+  <br>
+  <%= form_for @message do |f| %>
+  <%= f.hidden_field :recipient_id, value: @thing.user.id %>
+  <%= f.hidden_field :thing_id, value: @thing.id %>
+
+
+  <%= f.label :message %>
+  <%= f.text_area :message %>
+  <br>
+  <%= f.submit %>
+  <br><br>
+
+  <% end %>
+
 
 <% end %>
 <br><br><br>
