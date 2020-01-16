@@ -1,5 +1,5 @@
 <h2>offer a task</h2>
-<%= form_for @thing do |f| %>
+<%= form_for @thing, :html => {:multipart => true}  do |f| %>
 
 <%# act = 1 ('offer'), thing_type = 1 ('task') %>
 <%= f.hidden_field :act, :value => 'offer' %>
@@ -14,6 +14,10 @@
 
 <%= f.label :location %>
 <%= f.text_field :location, value: "#{@current_user.location}" %>
+
+<%= f.label :image %>
+<%= f.cl_image_upload :image %>
+
 <br>
 <%= f.submit %>
 <% end %>

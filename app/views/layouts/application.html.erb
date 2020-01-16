@@ -15,20 +15,52 @@
   <div id="container">
     <div id="header">
       <header>
-        <h1>payitforward</h1>
+        <div id="logo">
+          <h1>payitforward</h1>
+        </div>
+        <div id="navbarButtons">
         <nav>
           <% if @current_user.present? %>
-            Welcome, <%= @current_user.name %>-userid: (<%= @current_user.id %>)
-            |<%= link_to 'create listing', new_thing_path %>|
-            |<%= link_to 'browse listings', things_path %>|
-            |<%= link_to 'my listings', user_path( @current_user.id ) %>|
-            |<%= link_to 'enquiries', messages_path %>|
-            |<%= link_to 'logout', login_path, method: 'delete' %>|
+            Welcome, <%= @current_user.name %>
+            <%= link_to new_thing_path do %>
+            <div id="navButtons">
+            create listing
+            </div>
+            <% end %>
+            <%= link_to things_path do %>
+            <div id="navButtons">
+            browse listings
+            </div>
+            <% end %>
+            <%= link_to messages_path do %>
+            <div id="navButtons">
+            my listings
+            </div>
+            <% end %>
+            <%= link_to user_path( @current_user.id ) do %>
+            <div id="navButtons">
+            my account
+            </div>
+            <% end %>
+            <%= link_to login_path, method: 'delete' do %>
+            <div id="navButtons">
+            logout
+            </div>
+            <% end %>
           <% else %>
-            |<%= link_to 'login', login_path %>|
-            |<%= link_to 'signup', new_user_path %>|
+            <%= link_to login_path do %>
+            <div id="navButtons">
+            login
+            </div>
+            <% end %>
+            <%= link_to new_user_path do %>
+            <div id="navButtons">
+            signup
+            </div>
+            <% end %>
           <% end %>
         </nav>
+      </div>
       </header>
     </div>
     <div id="wrapper">

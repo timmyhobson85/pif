@@ -58,6 +58,7 @@ class UsersController < ApplicationController
   def account
     check_if_logged_in
     @user = @current_user
+    redirect_to user_path @current_user.id
   end
 
   private

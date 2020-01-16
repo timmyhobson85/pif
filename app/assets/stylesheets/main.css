@@ -29,6 +29,14 @@ body {
   width: 100%;
   top: 0;
   background-color:#87A387;
+  box-shadow: 0 5px 10px #0000006b;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 #wrapper {
@@ -51,4 +59,20 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+#navButtons {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color:#87A387;
+  margin: 5px;
+  border: 1px solid slategrey;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

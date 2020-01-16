@@ -1,56 +1,59 @@
-<h2><%= "#{@thing.act} - #{@thing.name}" %></h2>
-<h3>added by <%= @thing.user.name %></h3>
-<br>
-<p>
-  <%= @thing.description %>
-</p>
-<br>
+<div id="thingShow">
+
+<div id="thingShowInformation">
+<div id="thingShowInformationText"><h2><%= "#{@thing.act} #{@thing.name} - #{@thing.user.name}" %></h2>
 
 <% if @thing.image.present? %>
   <%= cl_image_tag (@thing.image) %>
    <br>
 <% end %>
-<br>
+<%= @thing.description %>
+</div>
 
-<br><br><br>
+<div id="thingMap">
+<%= render partial: 'single_map' %>
+</div>
+</div>
+
 <% if @thing.user_id == @current_user.id %>
-  <% if @thing.messages.present? %>
-    <h3>enquiries:</h3>
-    <% u = nil %>
-    <% @thing_messages_incoming.each do |m| %>
-      <% if u != m.sender.id %>
-        <h3>from <%= m.sender.name %></h3>
-        <p>message: <%= m.message %> - <%= m.id %> - <%= m.thing.name %></p>
-        <p><%= link_to 'reply', message_path(m.id) %></p>
-        <br>
-      <% end %> <!-- end the if u = m.sender.id -->
-      <% u = m.sender.id %>
-    <% end %> <!-- end @thing.message.each -->
-    <% else %>
-    <h3>No Messages.</h3>
-  <% end %> <!-- end if present? -->
-
-
-  <%= link_to 'delete thing', thing_path( @thing.id ), method: 'delete' %>
-  <%= link_to 'edit thing', edit_thing_path( @thing.id ) %>
-  <br><br>
+  <div id="myListingMessages">
+    <% if @thing.messages.present? %>
+      <h3>enquiries:</h3>
+      <% u = nil %>
+      <% @thing_messages_incoming.each do |m| %>
+        <% if u != m.sender.id %>
+          <%= link_to message_path(m.id) do %>
+          <div id="listingMessage"><%= m.message %> - <%= m.sender.name %></div>
+          <% end %>
+        <% end %> <!-- end the if u = m.sender.id -->
+        <% u = m.sender.id %>
+      <% end %> <!-- end @thing.message.each -->
+      <% else %>
+      <h3>No Messages.</h3>
+    <% end %> <!-- end if present? -->
+    <div id="thingButtons">
+      <%= link_to thing_path( @thing.id ), method: 'delete' do %>
+        <div id="divButton">delete listing</div>
+      <% end %>
+      <%= link_to edit_thing_path( @thing.id ) do %>
+      <div id="divButton">edit listing</div>
+      <% end %>
+    </div>
+  </div>
   <% else %>
-  <%= render partial: 'single_map' %>
-  <h4>Message to: <%= @thing.user.name %></h4>
-  <h2>message <%= @thing.user.name %></h2>
-  <br>
+
+  <div id="thingMessageForm">
   <%= form_for @message do |f| %>
   <%= f.hidden_field :recipient_id, value: @thing.user.id %>
   <%= f.hidden_field :thing_id, value: @thing.id %>
-
-
-  <%= f.label :message %>
+  <%= f.label "enquire with #{@thing.user.name}" %>
+  <br>
   <%= f.text_area :message %>
   <br>
   <%= f.submit %>
-  <br><br>
-
   <% end %>
+  </div>
 
 
 <% end %>
+</div>

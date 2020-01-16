@@ -1,15 +1,27 @@
-<h2>conversation regarding <%= @message.thing.name %></h2>
+<h2>chat about <%= @message.thing.name %> with <%= @other.name %></h2>
 <br><br><br>
+<div id="conversation">
+  <div id="chatbox">
+  <% @thread.each do |m| %>
+    <% if m.sender.name == @current_user.name %>
+    you:
+    <div id="conversationMessageSend">
+    <%= m.message %>
+    </div>
+    <% else %>
+    luke:
+    <div id="conversationMessageRecieve">
+    <div id="senderImage"><%= cl_image_tag m.sender.image %></div>
+    <div id="senderMessage"><%= m.message %></div>
+    <% @other_user = m.sender.name %>
+    </div>
+    <% end %>
 
-<div id="chatbox">
-<% @thread.each do |m| %>
-  <h5><%= m.sender.name %>:</h5>
-  <!-- if current user = sender diferent colour?? -->
-  <div id="conversationMessage">
-  <p><%= m.message %></p>
+  <% end %>
   </div>
-  <br>
-<% end %>
+  <!-- <div id="conversationInfo">
+    <%= cl_image_tag @message.thing.image %>
+    <%= cl_image_tag @message.thing.user.image %>
+  </div> -->
 </div>
-
 <%= render partial: 'reply' %>

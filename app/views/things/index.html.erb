@@ -1,90 +1,43 @@
 
 <div id="listings">
-<div id="listingNeeds">
-<h3>people in need</h3>
-<h4>tasks</h4>
-<ul>
-  <% @things.each do |t| %>
-    <% if t.user != @current_user && t.act == 'need' && t.thing_type == 'task'%>
-    <li>
-      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
-    </li>
+  <div id="listingNeeds">
+    <h1>people in need</h1>
+    <ul>
+      <% @things.each do |t| %>
+        <% if t.user != @current_user && t.act == 'need'%>
+        <li>
+          <%= link_to thing_path(t.id) do %>
+          <div id="individualListing">
+            <div id="individualListingImage">
+              <% if t.image.present? %>
+                <%= cl_image_tag t.image %>
+                <% else %>
+                <%= cl_image_tag t.user.image %>
+              <% end %>
+            </div>
+            <div id="individualListingText"><ul><li>help with: <%= t.thing_type %></li><li><%= t.name %></li><li>for - <%= t.user.name %></li></ul></div>
+          </div>
+          <% end %>
+        </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div id="listingOffers">
+  <h1>on offer</h1>
+  <ul>
+    <% @things.each do |t| %>
+      <% if t.user != @current_user && t.act == 'offer' %>
+      <li>
+        <%= link_to thing_path(t.id) do %>
+        <div id="individualListing">
+        <div id="individualListingImage"><%= cl_image_tag t.image %></div>
+        <div id="individualListingText"><ul><li>offering: <%= t.thing_type %></li><li><%= t.name %></li><li>for-<%= t.user.name %></li></ul></div>
+      </div>
+      <% end %>
+      </li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
-<h4>items</h4>
-<ul>
-  <% @things.each do |t| %>
-    <% if t.user != @current_user && t.act == 'need' && t.thing_type == 'item' %>
-    <li>
-      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
-    </li>
-    <% end %>
-  <% end %>
-</ul>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttext</h2>
-<h2>addtesttextfinal</h2>
-</div>
-<div id="listingOffers">
-<h3>on offer</h3>
-<h4>items</h4>
-<ul>
-  <% @things.each do |t| %>
-    <% if t.user != @current_user && t.act == 'offer' && t.thing_type == 'task' %>
-    <li>
-      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
-    </li>
-    <% end %>
-  <% end %>
-</ul>
-<h4>tasks</h4>
-<ul>
-  <% @things.each do |t| %>
-    <% if t.user != @current_user && t.act == 'offer' && t.thing_type == 'item' %>
-    <li>
-      <%= link_to "#{t.name} - #{t.user.name}", thing_path(t.id) %>
-    </li>
-    <% end %>
-  <% end %>
-</ul>
-</div>
+  </ul>
+  </div>
 </div>

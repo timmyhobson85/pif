@@ -1,12 +1,58 @@
+
+<div id="listings">
+  <div id="myListings">
+
+<h1>your listings:</h1>
+  <ul>
+    <% @current_user.things.each do |t| %>
+    <% totalmessages = nil %>
+      <% if t.user_id == @current_user.id %>
+      <li>
+        <%= link_to thing_path(t.id) do %>
+        <div id="individualListing">
+          <div id="individualListingImage"><%= cl_image_tag t.image %></div>
+          <div id="individualListingText">
+            <ul>
+              <li>help with: <%= t.thing_type %></li>
+              <li><%= t.name %></li>
+            </ul>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    <% end %>
+  </ul>
+</div>
+
+<div id="myEnquiries">
+
+
 <h2>your enquiries:</h2>
 
 <% @things.each do |t| %>
 
   <% if t.user != @current_user %>
     <% if t.messages.first.present? && t.messages.first.sender == @current_user %>
-      <%= link_to " #{t.act} - #{t.name} - #{t.user.name}", message_path(t.messages.first.id)%> <br>
+      <%= link_to message_path(t.messages.first.id) do %>
+      <div id="individualListing">
+        <div id="individualListingImage"><%= cl_image_tag t.image %></div>
+        <div id="individualListingText">
+          <ul>
+            <li>to: <%= t.user.name %></li>
+            <li><%= t.act %></li>
+            <li><%= t.name %></li>
+          </ul>
+        </div>
+      </div>
+      <% end %>
       <% else %>
     <% end %>
   <% end %>
 
 <% end %>
+
+<div id="listingNeeds">
+
+
+</div>

@@ -1,0 +1,21 @@
+#accountPage {
+  display:flex;
+}
+
+#accountInformation {
+  width: 400px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#divButton {
+  padding: 10px;
+  background-color:#87A387;
+  margin: 5px;
+}
+
+#accountButtons {
+  display:flex;
+}

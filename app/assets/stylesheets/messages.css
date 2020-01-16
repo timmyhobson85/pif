@@ -5,3 +5,54 @@
   background-color: #eeeeee;
   padding: 20px;
 }
+
+#conversation {
+  display: flex;
+}
+
+#conversationInfo {
+  width: 30vw;
+  display:flex;
+}
+
+#chatbox {
+  display: flex;
+  flex-direction: column;
+}
+
+#conversationMessageSend {
+  border: 1px solid #D4D6E2;
+  background-color: #dfd4e2;
+  color: black;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  place-self: flex-end;
+  margin-bottom: 5px;
+  text-align: right;
+}
+#conversationMessageRecieve {
+  display:flex;
+  border: 1px solid #D4D6E2;
+  background-color: #D4D6E2;
+  color: black;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: left;
+  align-items: center;
+}
+#senderImage{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+}
+
+#senderImage > img {
+  width:100%;
+  border-radius: 50%;
+  margin-right: 5px;
+}

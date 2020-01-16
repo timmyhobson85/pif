@@ -41,14 +41,8 @@ ul {
 
 img {
   border-radius: 10px;
-  box-shadow: 0 0 0 2px pink;
 }
 
-#conversationMessage {
-  border: 1px solid #D4D6E2;
-  background-color: #D4D6E2;
-  color: black;
-  border-radius: 10px;
-  width: fit-content;
-  padding: 10px;
+#logo {
+  margin: 10px;
 }
